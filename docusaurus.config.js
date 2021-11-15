@@ -23,15 +23,15 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/mergestat/docs/edit/main/',
+          editUrl: 'https://github.com/mergestat/docs/edit/main/ref/',
+          routeBasePath: '/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
-        },
+        blog: false, // TODO(patrickdevivo) remove this line and uncomment the below to enable the blog
+        // blog: {
+        //   showReadingTime: false,
+        //   editUrl:
+        //     'https://github.com/mergestat/docs/edit/main/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -43,7 +43,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Documentation',
+        title: 'MergeStat Docs',
         logo: {
           alt: 'Mergestat Logo',
           src: 'img/small_blue.png',
@@ -53,11 +53,11 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Reference',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'}, // TODO(patrickdevivo) uncomment this line
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/mergestat/mergestat',
             label: 'GitHub',
             position: 'right',
           },
@@ -67,11 +67,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Reference',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Reference',
+                to: '/',
               },
             ],
           },
@@ -80,15 +80,11 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/mergestat',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/mergestat',
               },
             ],
           },
@@ -101,7 +97,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/mergestat/mergestat',
               },
             ],
           },

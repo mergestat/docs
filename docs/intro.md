@@ -1,35 +1,17 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+MergeStat enables **SQL queries** for data in git repositories (and similar sources, such as the GitHub API).
+It allows you to ask questions about the history and contents of your source code.
+It's both an [open-source command line tool](https://github.com/askgitdev/askgit) and a [web application](https://app.mergestat.com/).
 
-## Getting Started
+For example, it can execute queries like this:
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
+```sql
+-- how many commits have been authored by user@email.com?
+SELECT count(*) FROM commits WHERE author_email = 'user@email.com'
 ```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
