@@ -26,12 +26,11 @@ const config = {
           editUrl: 'https://github.com/mergestat/docs/edit/main/ref/',
           routeBasePath: '/',
         },
-        blog: false, // TODO(patrickdevivo) remove this line and uncomment the below to enable the blog
-        // blog: {
-        //   showReadingTime: false,
-        //   editUrl:
-        //     'https://github.com/mergestat/docs/edit/main/blog/',
-        // },
+        blog: {
+          showReadingTime: false,
+          editUrl:
+            'https://github.com/mergestat/docs/edit/main/blog/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
