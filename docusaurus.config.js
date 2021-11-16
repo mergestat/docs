@@ -82,6 +82,10 @@ const config = {
                 href: 'https://stackoverflow.com/questions/tagged/mergestat',
               },
               {
+                label: 'Slack Community',
+                href: 'https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg',
+              },
+              {
                 label: 'Twitter',
                 href: 'https://twitter.com/mergestat',
               },
