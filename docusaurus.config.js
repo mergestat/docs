@@ -45,7 +45,7 @@ const config = {
         title: 'MergeStat Docs',
         logo: {
           alt: 'Mergestat Logo',
-          src: 'img/small_blue.png',
+          src: 'img/logo.svg',
         },
         items: [
           {
