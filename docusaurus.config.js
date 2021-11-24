@@ -27,6 +27,10 @@ const config = {
           routeBasePath: '/',
         },
         blog: {
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} AskGit, Inc.`
+          },
           showReadingTime: false,
           editUrl:
             'https://github.com/mergestat/docs/edit/main/blog/',

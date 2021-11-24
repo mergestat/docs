@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # NPM Registry
 
-`askgit` can also query the NPM registry API.
+`mergestat` can also query the NPM registry API.
 
 ## `npm_get_package`
 

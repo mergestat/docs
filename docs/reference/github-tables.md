@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # GitHub API
 
-You can use `askgit` to query the [GitHub API (v4)](https://docs.github.com/en/graphql).
+You can use `mergestat` to query the [GitHub API (v4)](https://docs.github.com/en/graphql).
 Constraints in your SQL query are pushed to the GitHub API as much as possible.
 For instance, if your query includes an `ORDER BY` clause and if items can be ordered in the GitHub API response (on the specified column), your query can avoid doing a full table scan and rely on the ordering returned by the API.
 
@@ -12,7 +12,7 @@ For instance, if your query includes an `ORDER BY` clause and if items can be or
 
 You must provide an authentication token in order to use the GitHub API tables.
 You can create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
-`askgit` will look for a `GITHUB_TOKEN` environment variable when executing, to use for authentication.
+`mergestat` will look for a `GITHUB_TOKEN` environment variable when executing, to use for authentication.
 This is also true if running as a runtime loadable extension.
 
 ## Rate Limiting
@@ -50,12 +50,12 @@ Table-valued-function that returns a list of users who have starred a repository
 | starred_at | DATETIME |
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
 
 ```sql
-SELECT * FROM github_stargazers('askgitdev', 'askgit');
-SELECT * FROM github_stargazers('askgitdev/askgit'); -- both are equivalent
+SELECT * FROM github_stargazers('mergestat', 'mergestat');
+SELECT * FROM github_stargazers('mergestat/mergestat'); -- both are equivalent
 ```
 
 ## `github_starred_repos`
@@ -86,12 +86,12 @@ SELECT * FROM github_starred_repos('patrickdevivo')
 Scalar function that returns the number of stars a GitHub repository has.
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
 
 ```sql
-SELECT github_stargazer_count('askgitdev', 'askgit');
-SELECT github_stargazer_count('askgitdev/askgit'); -- both are equivalent
+SELECT github_stargazer_count('mergestat', 'mergestat');
+SELECT github_stargazer_count('mergestat/mergestat'); -- both are equivalent
 ```
 
 ## `github_user`
@@ -148,9 +148,9 @@ Params:
 
 ```sql
 SELECT * FROM github_user_repos('patrickdevivo')
-SELECT * FROM github_org_repos('askgitdev')
+SELECT * FROM github_org_repos('mergestat')
 SELECT * FROM github_user_repos('patrickdevivo', 'OWNER')
-SELECT * FROM github_org_repos('askgitdev', 'OWNER,COLLABORATOR')
+SELECT * FROM github_org_repos('mergestat', 'OWNER,COLLABORATOR')
 ```
 
 ## `github_repo_issues`
@@ -185,12 +185,12 @@ Table-valued-function that returns all the issues of a GitHub repository.
 | url                   | TEXT      |
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
 
 ```sql
-SELECT * FROM github_repo_issues('askgitdev/askgit');
-SELECT * FROM github_repo_issues('askgitdev', 'askgit'); -- both are equivalent
+SELECT * FROM github_repo_issues('mergestat/mergestat');
+SELECT * FROM github_repo_issues('mergestat', 'mergestat'); -- both are equivalent
 ```
 ## `github_repo_prs`
 
@@ -239,12 +239,12 @@ Table-valued-function that returns all the pull requests of a GitHub repository.
 | url                      | TEXT     |
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
 
 ```sql
-SELECT * FROM github_repo_prs('askgitdev/askgit');
-SELECT * FROM github_repo_prs('askgitdev', 'askgit'); -- both are equivalent
+SELECT * FROM github_repo_prs('mergestat/mergestat');
+SELECT * FROM github_repo_prs('mergestat', 'mergestat'); -- both are equivalent
 ```
 
 ## `github_repo_branch_protections`
@@ -273,14 +273,14 @@ Table-valued-function that returns all the branch protection rules set on a GitH
 | restricts_review_dismissal       | BOOLEAN  |
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
 
 ```sql
-SELECT * FROM github_repo_branch_protections('askgitdev/askgit');
-SELECT * FROM github_repo_branch_protections('askgitdev', 'askgit');
-SELECT * FROM github_branch_protections('askgitdev/askgit');
-SELECT * FROM github_branch_protections('askgitdev', 'askgit'); -- all are equivalent
+SELECT * FROM github_repo_branch_protections('mergestat/mergestat');
+SELECT * FROM github_repo_branch_protections('mergestat', 'mergestat');
+SELECT * FROM github_branch_protections('mergestat/mergestat');
+SELECT * FROM github_branch_protections('mergestat', 'mergestat'); -- all are equivalent
 ```
 
 ## `github_repo_file_content`
@@ -288,13 +288,13 @@ SELECT * FROM github_branch_protections('askgitdev', 'askgit'); -- all are equiv
 Scalar function that returns the contents of a file in a GitHub repository
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
   3. `expression` - either a simple file path (`README.md`) or a rev-parse suitable expression that includes a path (`HEAD:README.md` or `<some-sha>:README.md`)
 
 ```sql
-SELECT github_stargazer_count('askgitdev', 'askgit', 'README.md');
-SELECT github_stargazer_count('askgitdev/askgit', 'README.md'); -- both are equivalent
+SELECT github_stargazer_count('mergestat', 'mergestat', 'README.md');
+SELECT github_stargazer_count('mergestat/mergestat', 'README.md'); -- both are equivalent
 ```
 
 ## `github_repo_issue_comments`
@@ -315,13 +315,13 @@ Table valued function that returns comments on a given issue.
 | issue_number                 | INT  |
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
   3. `issue_number` - the issue number
 
 ```sql
-SELECT github_repo_issue_comments('askgitdev/askgit', 100);
-SELECT github_issue_comments('askgitdev/askgit', 100);
+SELECT github_repo_issue_comments('mergestat/mergestat', 100);
+SELECT github_issue_comments('mergestat/mergestat', 100);
 ```
 
 ## `github_repo_pr_comments`
@@ -342,13 +342,13 @@ Table valued function that returns all comments on a given pull request.
 | pr_number                  | INT  |
 
 Params:
-  1. `fullNameOrOwner` - either the full repo name `askgitdev/askgit` or just the owner `askgitdev` (which would require the second argument)
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
   3. `number` - the pull request number to pull comments from
 
 ```sql
-SELECT github_repo_pr_comments('askgitdev/askgit', 200);
-SELECT github_repo_pr_comments('askgitdev', 'askgit', 200);
-SELECT github_pr_comments('askgitdev/askgit', 200);
-SELECT github_pr_comments('askgitdev',' askgit', 200);
+SELECT github_repo_pr_comments('mergestat/mergestat', 200);
+SELECT github_repo_pr_comments('mergestat', 'mergestat', 200);
+SELECT github_pr_comments('mergestat/mergestat', 200);
+SELECT github_pr_comments('mergestat',' mergestat', 200);
 ```

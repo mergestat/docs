@@ -9,15 +9,15 @@ sidebar_position: 1
 Currently, `homebrew` is one of the easier installation paths for the CLI.
 
 ```
-brew tap askgitdev/askgit
-brew install askgit
+brew tap mergestat/mergestat
+brew install mergestat
 ```
 
 ## Pre-Built Binaries
 
-The [latest releases](https://github.com/askgitdev/askgit/releases) should have pre-built binaries for Mac and Linux.
-You can download and add the `askgit` binary somewhere on your `$PATH` to use.
-`libaskgit.so` is also available to be loaded as a SQLite run-time extension.
+The [latest releases](https://github.com/mergestat/mergestat/releases) should have pre-built binaries for Mac and Linux.
+You can download and add the `mergestat` binary somewhere on your `$PATH` to use.
+`libmergestat.so` is also available to be loaded as a SQLite run-time extension.
 
 ## Go
 
@@ -27,19 +27,19 @@ The following (long 😬) `go install` commands can be used to install a binary 
 
 On Mac:
 ```
-CGO_CFLAGS=-DUSE_LIBSQLITE3 CGO_LDFLAGS=-Wl,-undefined,dynamic_lookup go install -tags="sqlite_vtable,vtable,sqlite_json1,static,system_libgit2" github.com/askgitdev/askgit@latest
+CGO_CFLAGS=-DUSE_LIBSQLITE3 CGO_LDFLAGS=-Wl,-undefined,dynamic_lookup go install -tags="sqlite_vtable,vtable,sqlite_json1,static,system_libgit2" github.com/mergestat/mergestat@latest
 ```
 
 On Linux:
 ```
-CGO_CFLAGS=-DUSE_LIBSQLITE3 CGO_LDFLAGS=-Wl,--unresolved-symbols=ignore-in-object-files go install -tags="sqlite_vtable,vtable,sqlite_json1,static,system_libgit2" github.com/askgitdev/askgit@latest
+CGO_CFLAGS=-DUSE_LIBSQLITE3 CGO_LDFLAGS=-Wl,--unresolved-symbols=ignore-in-object-files go install -tags="sqlite_vtable,vtable,sqlite_json1,static,system_libgit2" github.com/mergestat/mergestat@latest
 ```
 
-See the [`Makefile`](https://github.com/askgitdev/askgit/blob/main/Makefile) for more context.
+See the [`Makefile`](https://github.com/mergestat/mergestat/blob/main/Makefile) for more context.
 Checking out this repository and running `make` in the root will produce two files in the `.build` directory:
 
-  1. `askgit` - the CLI binary (which can then be moved into your `$PATH` for use)
-  2. `libaskgit.so` - a shared object file [SQLite extension](https://www.sqlite.org/loadext.html) that can be used by SQLite directly
+  1. `mergestat` - the CLI binary (which can then be moved into your `$PATH` for use)
+  2. `libmergestat.so` - a shared object file [SQLite extension](https://www.sqlite.org/loadext.html) that can be used by SQLite directly
 
 ## Using Docker
 
