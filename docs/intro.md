@@ -7,7 +7,7 @@ slug: /
 
 MergeStat enables **SQL queries** for data in git repositories (and related sources, such as the GitHub API).
 It allows you to ask questions about the history and contents of your source code.
-It's both an [open-source command line tool](https://github.com/mergestat/mergestat) and a [web application](https://app.mergestat.com/).
+<!-- It's both an [open-source command line tool](https://github.com/mergestat/mergestat) and a [web application](https://app.mergestat.com/). -->
 
 For example, it can execute queries like this:
 
