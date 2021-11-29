@@ -16,6 +16,10 @@ const config = {
   organizationName: 'mergestat', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
+  scripts: [
+    "/segment.js"
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
