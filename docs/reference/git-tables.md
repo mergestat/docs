@@ -9,7 +9,7 @@ If the `--repo` flag is specified, they will use the path provided there instead
 A parameter (usually the first) can also be provided to any of the tables below to override the default repo path.
 For instance, `SELECT * FROM commits('https://github.com/mergestat/mergestat')` will clone this repo to a temporary directory on disk and return its commits.
 
-##### `commits`
+## `commits`
 
 Similar to `git log`, the `commits` table includes all commits in the history of the currently checked out commit.
 
@@ -43,7 +43,7 @@ SELECT * FROM commits('https://github.com/mergestat/mergestat')
 SELECT * FROM commits('', 'some-ref')
 ```
 
-##### `refs`
+## `refs`
 
 | Column    | Type |
 |-----------|------|
@@ -57,7 +57,7 @@ SELECT * FROM commits('', 'some-ref')
 Params:
   1. `repository` - path to a local (on disk) or remote (http(s)) repository
 
-##### `stats`
+## `stats`
 
 | Column    | Type |
 |-----------|------|
@@ -81,7 +81,7 @@ SELECT * FROM stats('', 'COMMIT_HASH')
 SELECT commits.hash, stats.* FROM commits, stats('', commits.hash)
 ```
 
-##### `files`
+## `files`
 
 | Column     | Type |
 |------------|------|
@@ -93,7 +93,7 @@ Params:
   1. `repository` - path to a local (on disk) or remote (http(s)) repository
   2. `rev` - commit hash (or branch/tag name) to use for retrieving files in, defaults to `HEAD`
 
-##### `blame`
+## `blame`
 
 Similar to `git blame`, the `blame` table includes blame information for all files in the current HEAD.
 
