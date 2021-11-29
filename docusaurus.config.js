@@ -62,10 +62,15 @@ const config = {
             position: 'left',
             label: 'Reference',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'}, // TODO(patrickdevivo) uncomment this line
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/mergestat/mergestat',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg',
+            label: 'Slack',
             position: 'right',
           },
         ],
