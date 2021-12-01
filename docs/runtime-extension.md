@@ -5,7 +5,7 @@ sidebar_position: 4
 # SQLite Runtime Extension
 
 MergeStat can also be used as a SQLite [run-time loadable extension](https://www.sqlite.org/loadext.html).
-This is a powerful way to use MergeStat in any environment that supports SQLite and loading run-time extensions, including **many programming languages**.
+This is a powerful way to use MergeStat in any environment that supports SQLite and run-time extensions, including **many programming languages**.
 
 ## Usage
 
