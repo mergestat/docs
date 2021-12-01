@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/small_blue.png',
+  favicon: 'img/favicon.ico',
   organizationName: 'mergestat', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
