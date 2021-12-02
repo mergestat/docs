@@ -17,7 +17,12 @@ const config = {
   projectName: 'docs', // Usually your repo name.
 
   scripts: [
-    "/segment.js"
+    "/segment.js",
+    {
+      src: "https://plausible.io/js/plausible.js",
+      defer: true,
+      "data-domain": "docs.mergestat.com"
+    }
   ],
 
   presets: [
