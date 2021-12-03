@@ -7,8 +7,7 @@ tags: [mergestat, issues, prs, github]
 Unanswered issues and pull requests on GitHub repos are no fun, especially if you're the one asking for help 🙂.
 I've seen many projects making use of [automation](https://github.com/marketplace/stale) to close (or comment on) them, though folks have [argued against](https://drewdevault.com/2021/10/26/stalebot.html) that.
 
-Regardless, *identifying* unanswered issues can be valuable, especially for maintainers to ensure they're addressing user concerns.
-Or even for anyone looking places to help.
+Regardless, *identifying* unanswered issues can be valuable, especially for maintainers to ensure they're addressing user concerns - or even for anyone looking for places to help.
 
 You can use the **MergeStat [GitHub tables](/reference/github-tables)** to identify stale issues or PRs in a repo (or even across many repos).
 
