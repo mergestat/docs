@@ -32,7 +32,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/mergestat/docs/edit/main/ref/',
+          editUrl: 'https://github.com/mergestat/docs/edit/main/',
           routeBasePath: '/',
         },
         blog: {
