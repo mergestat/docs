@@ -17,7 +17,7 @@ brew install mergestat
 
 The [latest releases](https://github.com/mergestat/mergestat/releases) should have pre-built binaries for Mac and Linux.
 You can download and add the `mergestat` binary somewhere on your `$PATH` to use.
-`libmergestat.so` is also available to be loaded as a SQLite run-time extension.
+`libmergestat.so` is also available to be loaded as a [SQLite run-time extension](../runtime-extension).
 
 ## Go
 
