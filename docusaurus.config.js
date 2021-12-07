@@ -69,6 +69,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            href: 'https://app.mergestat.com/',
+            label: 'Try',
+            position: 'left',
+          },
+          {
             href: 'https://github.com/mergestat/mergestat',
             label: 'GitHub',
             position: 'right',
