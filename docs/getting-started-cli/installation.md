@@ -13,6 +13,21 @@ brew tap mergestat/mergestat
 brew install mergestat
 ```
 
+## Docker
+
+Use our [official image](https://hub.docker.com/r/mergestat/mergestat) on Docker Hub.
+
+```bash
+docker run -v "${PWD}:/repo" mergestat/mergestat "select count(*) from commits"
+```
+
+:::note
+
+Here we pass the `-v` flag to mount a host path into the container at `/repo`. This is where `mergestat` will look for a default git repository, if none is specific in the query itself.
+
+:::
+
+
 ## Pre-Built Binaries
 
 The [latest releases](https://github.com/mergestat/mergestat/releases) should have pre-built binaries for Mac and Linux.
@@ -40,17 +55,3 @@ Checking out this repository and running `make` in the root will produce two fil
 
   1. `mergestat` - the CLI binary (which can then be moved into your `$PATH` for use)
   2. `libmergestat.so` - a shared object file [SQLite extension](https://www.sqlite.org/loadext.html) that can be used by SQLite directly
-
-## Using Docker
-
-Build an image locally using docker
-
-```
-docker build -t askgit:latest .
-```
-
-Or use an official image from [docker hub](https://hub.docker.com/repository/docker/augmentable/askgit)
-
-```
-docker pull augmentable/askgit:latest
-```
