@@ -1,6 +1,7 @@
 ---
 title: Finding Unapproved, Merged PRs
 authors: [patrickdevivo]
+image: ./github_pr_admin_override.png
 tags: [mergestat, github, pull requests, git]
 ---
 
