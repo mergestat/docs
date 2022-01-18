@@ -2,6 +2,7 @@
 title: Finding Unapproved, Merged PRs
 authors: [patrickdevivo]
 image: ./github_pr_admin_override.png
+description: The following MergeStat query will list all unapproved pull requests merged into the main branch.
 tags: [mergestat, github, pull requests, git]
 ---
 
