@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Mergestat Docs',
+  title: 'MergeStat Docs',
   tagline: 'SQL for the software development lifecycle',
   url: 'https://docs.mergestat.com',
   baseUrl: '/',
@@ -57,7 +57,7 @@ const config = {
       navbar: {
         title: 'MergeStat Docs',
         logo: {
-          alt: 'Mergestat Logo',
+          alt: 'MergeStat Logo',
           src: 'img/logo.svg',
         },
         items: [
