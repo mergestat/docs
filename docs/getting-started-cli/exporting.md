@@ -1,4 +1,8 @@
-# Exporting
+---
+sidebar_position: 4
+---
+
+# Exporting to SQLite
 
 You can use the `mergestat export` sub command to save the output of queries into a sqlite database file.
 The command expects a path to a db file (which will be created if it doesn't already exist) and a variable number of "export pairs," specified by the `-e` flag.
