@@ -1,3 +1,7 @@
+---
+description: MergeStat can also be used to clone all the repositories of a GitHub organization to a local directory. This can be useful for anyone looking to back-up all repositories belong to an organization, or run a script that acts on multiple repositories on disk.
+---
+
 # Clone Multiple Repos to Disk
 
 The `--clone-dir` option of the CLI allows users to specify a local directory to use when cloning repositories (either via `http(s)` or `ssh`) during query execution.
