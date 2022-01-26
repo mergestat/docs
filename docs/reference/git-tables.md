@@ -39,11 +39,14 @@ SELECT * FROM commits('/some/path/to/repo')
 -- clone a remote repo and use it
 SELECT * FROM commits('https://github.com/mergestat/mergestat')
 
--- use the default repo, but provide an alternate branch
+-- use the default repo, but provide an alternate branch/ref
+-- list available refs and branches with `SELECT * FROM refs('https://github.com/mergestat/mergestat')`
 SELECT * FROM commits('', 'some-ref')
 ```
 
 ## `refs`
+
+Similar to `git-show-ref`, the `refs` table includes all git references available in a selected repository.
 
 | Column    | Type |
 |-----------|------|
@@ -56,6 +59,11 @@ SELECT * FROM commits('', 'some-ref')
 
 Params:
   1. `repository` - path to a local (on disk) or remote (http(s)) repository
+
+```sql
+-- return all refs available in a repo
+SELECT * FROM refs('https://github.com/mergestat/mergestat')
+```
 
 ## `stats`
 
