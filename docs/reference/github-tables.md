@@ -247,6 +247,28 @@ SELECT * FROM github_repo_prs('mergestat/mergestat');
 SELECT * FROM github_repo_prs('mergestat', 'mergestat'); -- both are equivalent
 ```
 
+## `github_repo_branches`
+
+Table-valued-function that returns branch information from a GitHub repository.
+
+| Column                           | Type     |
+|----------------------------------|----------|
+| owner                            | TEXT     |
+| repo_name                        | TEXT     |
+| name                             | TEXT     |
+| author_name                      | TEXT     |
+| author_email                     | TEXT     |
+| commit_hash                      | TEXT     |
+
+Params:
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
+  2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
+
+```sql
+SELECT * FROM github_repo_branches('mergestat', 'mergestat');
+SELECT * FROM github_repo_branches('mergestat/mergestat');
+```
+
 ## `github_repo_branch_protections`
 
 Table-valued-function that returns all the branch protection rules set on a GitHub repository (requires GitHub access token to have admin privileges).
