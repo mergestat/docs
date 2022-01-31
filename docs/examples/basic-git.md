@@ -26,14 +26,17 @@ SELECT * FROM commits('', 'COMMIT_SHA') -- list commits starting from a commit h
 ```
 
 Passing an empty string (`''`) as the first parameter to most `git` tables indicates that the default repository should be used (which is inferred from the context, such as the current directory or the `--repo` flag).
-This can be necessary when an additional parameter is passed, but you want to infer the repositoryå.
+This can be necessary when an additional parameter is passed, but you want to infer the repository.
 
 #### List all commits by a specific author
 
 ##### By email
 
 ```sql
-SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_name = 'patrick@mergestat.com'
+-- All commits from authors with '@gmail.com' email addresses
+SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_email LIKE '%@gmail.com'
+-- All commits from author with a specific email address
+SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_email = 'someone@example.com'
 ```
 
 ##### By name
@@ -53,7 +56,8 @@ SELECT * FROM refs('https://github.com/mergestat/mergestat')
 ####  Branches only
 
 ```sql
-SELECT * FROM refs WHERE type = 'branch'
+SELECT * FROM refs('https://github.com/mergestat/mergestat')
+WHERE type = 'branch'
 ```
 
 ```sql
@@ -66,12 +70,14 @@ WHERE type = 'branch' AND commits.hash = refs.hash
 #### Tags only
 
 ```sql
-SELECT * FROM refs WHERE type = 'tag'
+SELECT * FROM refs('https://github.com/mergestat/mergestat')
+WHERE type = 'tag'
 ```
 
 ```sql
 -- version tags only
-SELECT * FROM refs WHERE type = 'tag' AND name LIKE 'v%'
+SELECT * FROM refs('https://github.com/mergestat/mergestat')
+WHERE type = 'tag' AND name LIKE 'v%'
 ```
 
 ### Listing `files`
@@ -80,7 +86,8 @@ The [`files`](/reference/git-tables#files) table valued function lists all the f
 It can be *joined* with the `commits` table to traverse the files in the history of a repository, across many commits.
 
 ```sql
-SELECT * FROM files
+SELECT * FROM files('https://github.com/mergestat/mergestat')
+LIMIT 10
 ```
 
 :::note
