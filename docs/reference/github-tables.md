@@ -253,8 +253,6 @@ Table-valued-function that returns branch information from a GitHub repository.
 
 | Column                           | Type     |
 |----------------------------------|----------|
-| owner                            | TEXT     |
-| repo_name                        | TEXT     |
 | name                             | TEXT     |
 | author_name                      | TEXT     |
 | author_email                     | TEXT     |
