@@ -247,6 +247,39 @@ SELECT * FROM github_repo_prs('mergestat/mergestat');
 SELECT * FROM github_repo_prs('mergestat', 'mergestat'); -- both are equivalent
 ```
 
+## `github_repo_pr_commits`
+
+Table valued function that returns all commits on a given pull request.
+
+
+| Column                   | Type     |
+|--------------------------|----------|
+| owner                    | TEXT     |
+| reponame                 | TEXT     |
+| pr_number                | INT      |
+| hash                     | TEXT     |
+| message                  | TEXT     |
+| author_email             | TEXT     |
+| author_email             | TEXT     |
+| author_when              | DATETIME |
+| committer_name           | TEXT     |
+| committer_email          | TEXT     |
+| committer_when           | DATETIME |
+| additions                | INT      |
+| deletions                | INT      |
+| changed_files            | INT      |
+| url                      | TEXT     |
+
+Params:
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
+  2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
+  3. `number` - the pull request number to pull commits from
+
+```sql
+SELECT * FROM github_repo_pr_commits('mergestat/mergestat', 200);
+SELECT * FROM github_repo_pr_commits('mergestat', 'mergestat', 200); 
+```
+
 ## `github_repo_branch_protections`
 
 Table-valued-function that returns all the branch protection rules set on a GitHub repository (requires GitHub access token to have admin privileges).
