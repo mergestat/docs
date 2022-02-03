@@ -351,6 +351,7 @@ SELECT github_repo_pr_comments('mergestat/mergestat', 200);
 SELECT github_repo_pr_comments('mergestat', 'mergestat', 200);
 SELECT github_pr_comments('mergestat/mergestat', 200);
 SELECT github_pr_comments('mergestat',' mergestat', 200);
+```
 
 ## `github_repo_commits`
 
