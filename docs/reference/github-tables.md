@@ -351,4 +351,33 @@ SELECT github_repo_pr_comments('mergestat/mergestat', 200);
 SELECT github_repo_pr_comments('mergestat', 'mergestat', 200);
 SELECT github_pr_comments('mergestat/mergestat', 200);
 SELECT github_pr_comments('mergestat',' mergestat', 200);
+
+## `github_repo_commits`
+
+Table valued function that returns all the commits of a GitHub repository.
+
+| Column                     | Type     |
+|----------------------------|----------|
+| owner                      | TEXT     |
+| reponame                   | TEXT     |
+| hash                       | TEXT     |
+| messaage                   | TEXT     |
+| author_name                | TEXT     |
+| author_email               | TEXT     |
+| author_when                | DATETIME |
+| committer_name             | TEXT     |
+| committer_email            | TEXT     |
+| committer_when             | DATETIME |
+| additions                  | INT      |
+| deletions                  | INT      |
+| changed_files              | INT      |
+| url                        | TEXT     |
+
+Params:
+  1. `fullNameOrOwner` - either the full repo name `mergestat/mergestat` or just the owner `mergestat` (which would require the second argument)
+  2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
+
+```sql
+SELECT github_repo_commits('mergestat/mergestat');
+SELECT github_repo_commits('mergestat', 'mergestat');
 ```
