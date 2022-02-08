@@ -101,6 +101,23 @@ Params:
   1. `repository` - path to a local (on disk) or remote (http(s)) repository
   2. `rev` - commit hash (or branch/tag name) to use for retrieving files in, defaults to `HEAD`
 
+```sql
+-- return the attributes of two files
+SELECT * FROM files
+LIMIT 2
+
+-- return the file paths modified in individual commits
+SELECT files.path, commits.hash FROM commits, files('', commits.hash)
+LIMIT 10
+```
+
+:::note
+
+Queries of files can be an expensive if `*` is used, as the `contents` columns contains the full contents of a file.
+This can cause problems in memory constrained execution environments, especially if you're returning many files over many commits.
+
+:::
+
 ## `blame`
 
 Similar to `git blame`, the `blame` table includes blame information for all files in the current HEAD.
