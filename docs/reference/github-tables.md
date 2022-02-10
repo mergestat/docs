@@ -359,8 +359,6 @@ Table valued function that returns all the commits of a GitHub repository.
 
 | Column                     | Type     |
 |----------------------------|----------|
-| owner                      | TEXT     |
-| reponame                   | TEXT     |
 | hash                       | TEXT     |
 | messaage                   | TEXT     |
 | author_name                | TEXT     |
@@ -379,6 +377,6 @@ Params:
   2. `name` - optional if the first argument is a "full" name, otherwise required - the name of the repo
 
 ```sql
-SELECT github_repo_commits('mergestat/mergestat');
-SELECT github_repo_commits('mergestat', 'mergestat');
+SELECT * FROM github_repo_commits('mergestat/mergestat');
+SELECT * FROM github_repo_commits('mergestat', 'mergestat');
 ```
