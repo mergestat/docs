@@ -254,8 +254,6 @@ Table valued function that returns all commits on a given pull request.
 
 | Column                   | Type     |
 |--------------------------|----------|
-| owner                    | TEXT     |
-| reponame                 | TEXT     |
 | pr_number                | INT      |
 | hash                     | TEXT     |
 | message                  | TEXT     |
