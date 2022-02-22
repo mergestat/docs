@@ -8,7 +8,7 @@ sidebar_position: 2
 
 A table-valued function that searches text by line for a string match.
 Meant to behave somewhat similarly to the `grep` command line tool.
-The search time is a [regular expression](https://pkg.go.dev/regexp/syntax).
+The search term is a [regular expression](https://pkg.go.dev/regexp/syntax).
 
 | Column      | Type     |
 |-------------|----------|
