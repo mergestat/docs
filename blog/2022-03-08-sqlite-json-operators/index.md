@@ -114,7 +114,7 @@ This query may take some time to run, as it makes a fair number of GitHub API re
 We see that most repos with a `package.json` file also have a name, while some do not (`NULL`).
 All the declared licences appear to be **MIT**.
 
-### Dependencies
+#### Dependencies
 
 Finally, let's take a look at all the *dependencies* declared in `package.json` files across (JavaScript/TypeScript) codebases in an org.
 This time, let's try on the [`freeCodeCamp`](https://github.com/freeCodeCamp) GitHub org.
