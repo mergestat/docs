@@ -61,4 +61,16 @@ db.close();
 
 ### Python
 
-`TODO`
+```python
+import sqlite3
+
+con = sqlite3.connect(":memory:")
+
+con.enable_load_extension(True)
+con.execute(f"select load_extension('./libmergestat')")
+con.enable_load_extension(False)
+
+for row in con.cursor().execute("SELECT * FROM commits('https://github.com/mergestat/mergestat')"):
+    print(row)
+```
+
