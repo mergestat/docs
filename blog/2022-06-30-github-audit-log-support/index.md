@@ -35,6 +35,26 @@ This feature only works with [GitHub Enterprise organizations](https://docs.gith
 This enables some interesting use-cases for GitHub enterprise users looking to monitor, alert and report on events from the GitHub audit log.
 We're working with some early users of this table, and will publish some guides and examples in the near future 🔜.
 
+The `JSON` column (`actor_location`) can be accessed with the [SQLite JSON operators](blog/2022/03/08/sqlite-json-operators).
+
+```sql
+SELECT actor_location->>'country' FROM github_org_audit_log('mergestat')
+```
+
+```
++----------------------------+
+| ACTOR_LOCATION->>'COUNTRY' |
++----------------------------+
+| United States              |
++----------------------------+
+| United States              |
++----------------------------+
+| Belgium                    |
++----------------------------+
+| ...                        |
++----------------------------+
+```
+
 **It's important to note the following from the [GitHub API docs](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization#using-the-audit-log-api) as well:**
 
 ![GitHub audit log notes](github-docs-notes.png)
