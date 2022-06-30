@@ -57,7 +57,7 @@ SELECT actor_location->>'country' FROM github_org_audit_log('mergestat')
 
 **It's important to note the following from the [GitHub API docs](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization#using-the-audit-log-api) as well:**
 
-![GitHub audit log notes](github-docs-notes.png)
+[![GitHub audit log notes](github-docs-notes.png)](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization#using-the-audit-log-api)
 
 :::info Join our Slack
 
