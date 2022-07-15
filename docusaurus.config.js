@@ -22,7 +22,11 @@ const config = {
       src: "https://plausible.io/js/plausible.js",
       defer: true,
       "data-domain": "docs.mergestat.com"
-    }
+    },
+    {
+      src: "https://cdn.pagesense.io/js/mergestat/897af3992dfe4f739a592bf9c2a9c5ec.js",
+      async: false,
+    },
   ],
 
   presets: [
