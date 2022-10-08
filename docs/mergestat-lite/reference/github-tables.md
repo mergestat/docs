@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # GitHub API
 
-You can use `mergestat` to query the [GitHub API (v4)](https://docs.github.com/en/graphql).
+You can use MergeStat Lite to query the [GitHub API (v4)](https://docs.github.com/en/graphql).
 Constraints in your SQL query are pushed to the GitHub API as much as possible.
 For instance, if your query includes an `ORDER BY` clause and if items can be ordered in the GitHub API response (on the specified column), your query can avoid doing a full table scan and rely on the ordering returned by the API.
 
@@ -12,7 +12,7 @@ For instance, if your query includes an `ORDER BY` clause and if items can be or
 
 You must provide an authentication token in order to use the GitHub API tables.
 You can create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
-`mergestat` will look for a `GITHUB_TOKEN` environment variable when executing, to use for authentication.
+The `mergestat` command will look for a `GITHUB_TOKEN` environment variable when executing, to use for authentication.
 This is also true if running as a runtime loadable extension.
 
 ## Rate Limiting

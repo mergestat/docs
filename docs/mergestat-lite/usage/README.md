@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Usage
 
+Running:
+
 ```bash
 mergestat -h
 ```
@@ -17,7 +19,7 @@ mergestat "SELECT * FROM commits"
 
 Your current working directory will be used as the path to the git repository to query by default.
 Use the `--repo` flag to specify an alternate path, or even a remote repository reference (http(s) or ssh).
-`mergestat` will clone the remote repository to a temporary directory before executing a query.
+MergeStat Lite will clone the remote repository to a temporary directory before executing a query.
 
 You can also pass a query in via `stdin`:
 

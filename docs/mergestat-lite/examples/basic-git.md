@@ -7,7 +7,7 @@ The following examples show simple queries that make use of the `git` tables.
 List all commits in the currently checked out history:
 
 ```sql
-SELECT * FROM commits('https://github.com/mergestat/mergestat')
+SELECT * FROM commits('https://github.com/mergestat/mergestat-lite')
 ```
 
 We're specifying the HTTP git repo as an argument to the `commits` table-valued function, by passing it as the first parameter.
@@ -34,15 +34,15 @@ This can be necessary when an additional parameter is passed, but you want to in
 
 ```sql
 -- All commits from authors with '@gmail.com' email addresses
-SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_email LIKE '%@gmail.com'
+SELECT * FROM commits('https://github.com/mergestat/mergestat-lite') WHERE author_email LIKE '%@gmail.com'
 -- All commits from author with a specific email address
-SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_email = 'someone@example.com'
+SELECT * FROM commits('https://github.com/mergestat/mergestat-lite') WHERE author_email = 'someone@example.com'
 ```
 
 ##### By name
 
 ```sql
-SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_name LIKE '%Patrick%'
+SELECT * FROM commits('https://github.com/mergestat/mergestat-lite') WHERE author_name LIKE '%Patrick%'
 ```
 
 ### Listing `refs`
@@ -50,13 +50,13 @@ SELECT * FROM commits('https://github.com/mergestat/mergestat') WHERE author_nam
 See [here](https://git-scm.com/book/en/v2/Git-Internals-Git-References) for more context on git references.
 
 ```sql
-SELECT * FROM refs('https://github.com/mergestat/mergestat')
+SELECT * FROM refs('https://github.com/mergestat/mergestat-lite')
 ```
 
 ####  Branches only
 
 ```sql
-SELECT * FROM refs('https://github.com/mergestat/mergestat')
+SELECT * FROM refs('https://github.com/mergestat/mergestat-lite')
 WHERE type = 'branch'
 ```
 
@@ -70,13 +70,13 @@ WHERE type = 'branch' AND commits.hash = refs.hash
 #### Tags only
 
 ```sql
-SELECT * FROM refs('https://github.com/mergestat/mergestat')
+SELECT * FROM refs('https://github.com/mergestat/mergestat-lite')
 WHERE type = 'tag'
 ```
 
 ```sql
 -- version tags only
-SELECT * FROM refs('https://github.com/mergestat/mergestat')
+SELECT * FROM refs('https://github.com/mergestat/mergestat-lite')
 WHERE type = 'tag' AND name LIKE 'v%'
 ```
 
@@ -86,7 +86,7 @@ The [`files`](/reference/git-tables#files) table valued function lists all the f
 It can be *joined* with the `commits` table to traverse the files in the history of a repository, across many commits.
 
 ```sql
-SELECT * FROM files('https://github.com/mergestat/mergestat')
+SELECT * FROM files('https://github.com/mergestat/mergestat-lite')
 LIMIT 10
 ```
 

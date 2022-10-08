@@ -7,7 +7,7 @@ sidebar_position: 1
 The following tables access a git repository in the current directory by default.
 If the `--repo` flag is specified, they will use the path provided there instead.
 A parameter (usually the first) can also be provided to any of the tables below to override the default repo path.
-For instance, `SELECT * FROM commits('https://github.com/mergestat/mergestat')` will clone this repo to a temporary directory on disk and return its commits.
+For instance, `SELECT * FROM commits('https://github.com/mergestat/mergestat-lite')` will clone this repo to a temporary directory on disk and return its commits.
 
 ## `commits`
 
@@ -37,10 +37,10 @@ SELECT * FROM commits
 SELECT * FROM commits('/some/path/to/repo')
 
 -- clone a remote repo and use it
-SELECT * FROM commits('https://github.com/mergestat/mergestat')
+SELECT * FROM commits('https://github.com/mergestat/mergestat-lite')
 
 -- use the default repo, but provide an alternate branch/ref
--- list available refs and branches with `SELECT * FROM refs('https://github.com/mergestat/mergestat')`
+-- list available refs and branches with `SELECT * FROM refs('https://github.com/mergestat/mergestat-lite')`
 SELECT * FROM commits('', 'some-ref')
 ```
 
@@ -62,7 +62,7 @@ Params:
 
 ```sql
 -- return all refs available in a repo
-SELECT * FROM refs('https://github.com/mergestat/mergestat')
+SELECT * FROM refs('https://github.com/mergestat/mergestat-lite')
 ```
 
 ## `stats`
