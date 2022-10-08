@@ -82,7 +82,7 @@ WHERE type = 'tag' AND name LIKE 'v%'
 
 ### Listing `files`
 
-The [`files`](/reference/git-tables#files) table valued function lists all the files **in a given commit tree**.
+The [`files`](/mergestat-lite/reference/git-tables#files) table valued function lists all the files **in a given commit tree**.
 It can be *joined* with the `commits` table to traverse the files in the history of a repository, across many commits.
 
 ```sql

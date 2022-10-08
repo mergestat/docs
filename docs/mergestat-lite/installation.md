@@ -32,7 +32,7 @@ Here we pass the `-v` flag to mount a host path into the container at `/repo`. T
 
 The [latest releases](https://github.com/mergestat/mergestat-lite/releases) should have pre-built binaries for Mac and Linux.
 You can download and add the `mergestat` binary somewhere on your `$PATH` to use.
-`libmergestat.so` is also available to be loaded as a [SQLite run-time extension](../runtime-extension).
+`libmergestat.so` is also available to be loaded as a [SQLite run-time extension](/mergestat-lite/usage/runtime-extension).
 
 ## Go
 
