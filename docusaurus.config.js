@@ -59,18 +59,18 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'MergeStat Documentation',
+        // title: 'MergeStat Documentation',
         logo: {
           alt: 'MergeStat Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo-with-text.svg',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'welcome',
-          //   position: 'left',
-          //   label: 'Reference',
-          // },
+          {
+            type: 'doc',
+            docId: 'welcome/README',
+            position: 'left',
+            label: 'Docs',
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   href: 'https://app.mergestat.com/',

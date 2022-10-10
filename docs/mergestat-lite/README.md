@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 # MergeStat Lite
 
-**`mergestat-lite`** makes use of [SQLite](https://sqlite.org/index.html) to power its SQL execution environment.
+[**`mergestat-lite`**](https://github.com/mergestat/mergestat-lite) is a local CLI for executing SQL queries. It makes use of [SQLite](https://sqlite.org/index.html) to power its query execution environment.
 However, data is not *pre-loaded* into a SQLite database file.
 Instead, we take advantage of a feature called the [virtual table mechanism](https://www.sqlite.org/vtab.html), which allows us to define how to *access* data sources, which SQLite then uses to fetch data *as a query executes*.
 
