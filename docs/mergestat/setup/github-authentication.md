@@ -17,6 +17,8 @@ You can set a GitHub PAT in the [`/settings`](http://localhost:3300/settings) pa
 
 ![Set a GitHub PAT in the management UI (screenshot)](setting-github-pat.jpg)
 
+## Sync Types
+
 ### Without a Github PAT
 
 If you *do not* supply a GitHub PAT, the following sync types will work or not work, depending on if the repo is public or private:
@@ -56,3 +58,13 @@ If you *do* supply a GitHub PAT, the following sync types will work with no scop
 |`GIT_REFS`            |✅          |✴️          |-                      |`repo`                              |
 |`SYFT_REPO_SCAN`      |✅          |✴️          |-                      |`repo`                              |
 |`TRIVY_REPO_SCAN`     |✅          |✴️          |-                      |`repo`                              |
+
+
+## Repo Auto Imports
+
+Learn more about repo auto imports [here](repo-auto-imports).
+
+|                    |No GitHub PAT|With GitHub PAT|Required Scopes        |
+|--------------------|-------------|---------------|-----------------------|
+|Org                 |❌            |✴️             |read:org               |
+|User                |❌            |✅              |-                      |
