@@ -1,0 +1,84 @@
+{
+    "redirects": [
+        {
+            "from": "/welcome/background",
+            "to": "/",
+            "permanent": true
+        },
+        {
+            "from": "/welcome/mission",
+            "to": "/",
+            "permanent": true
+        },
+        { 
+            "source": "/getting-started/installation",
+            "destination": "/mergestat-lite/installation",
+            "permanent": true
+        },
+        { 
+            "source": "/getting-started-cli/usage",
+            "destination": "/mergestat-lite/usage/",
+            "permanent": true
+        },
+        {
+            "source": "/getting-started-cli/summarize-commits",
+            "destination": "/mergestat-lite/usage/summarize-commits",
+            "permanent": true
+        },
+        {
+            "source": "/getting-started-cli/exporting",
+            "destination": "/mergestat-lite/usage/exporting",
+            "permanent": true
+        },
+        {
+            "source": "/runtime-extension",
+            "destination": "/mergestat-lite/usage/runtime-extension",
+            "permanent": true
+        },
+        {
+            "source": "/reference/git-tables",
+            "destination": "/mergestat-lite/reference/git-tables",
+            "permanent": true
+        },
+        {
+            "source": "/api/public",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/reference/git-tables",
+            "destination": "/mergestat-lite/reference/git-tables",
+            "permanent": true
+        },
+        {
+            "source": "/reference/utilities",
+            "destination": "/mergestat-lite/reference/utilities",
+            "permanent": true
+        },
+        {
+            "source": "/reference/github-tables",
+            "destination": "/mergestat-lite/reference/github-tables",
+            "permanent": true
+        },
+        {
+            "source": "/reference/npm-tables",
+            "destination": "/mergestat-lite/reference/npm-tables",
+            "permanent": true
+        },
+        {
+            "source": "/reference/sourcegraph-tables",
+            "destination": "/mergestat-lite/reference/sourcegraph-tables",
+            "permanent": true
+        },
+        {
+            "source": "/examples/basic-git",
+            "destination": "/mergestat-lite/examples/basic-git",
+            "permanent": true
+        },
+        {
+            "source": "/miscellaneous/cloning-all-org-repos",
+            "destination": "/mergestat-lite/miscellaneous/cloning-all-org-repos",
+            "permanent": true
+        }
+    ]
+}
