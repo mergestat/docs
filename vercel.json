@@ -1,12 +1,12 @@
 {
     "redirects": [
         {
-            "from": "/welcome/background",
+            "source": "/welcome/background",
             "to": "/",
             "permanent": true
         },
         {
-            "from": "/welcome/mission",
+            "source": "/welcome/mission",
             "to": "/",
             "permanent": true
         },
