@@ -25,4 +25,4 @@ For now, here is the current state of what we are working on and some of the roa
 
 ## GitHub Pull Requests Grafana Example Screenshot
 
-![Pull Requests Example Dashboard](https://github.com/mergestat/fuse/blob/main/examples/templates/grafana/screenshots/mergestat-examples.png?raw=true)
+![Pull Requests Example Dashboard](https://github.com/mergestat/mergestat/blob/main/examples/templates/grafana/screenshots/mergestat-examples.png?raw=true)
