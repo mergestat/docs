@@ -1,7 +1,7 @@
 ---
 title: MergeStat, now with some PostgreSQL 🐘 🎉
 authors: [patrickdevivo]
-description: Today we're very happy to announce a new flavor of [**MergeStat**](https://github.com/mergestat/mergestat)! If you've been following our progress over the last year, you'll know that our mission is to **enable operational analytics for software engineering teams**.
+description: Today we're very happy to announce a new flavor of MergeStat, based on PostgreSQL!
 tags: [mergestat, github, git, postgres, sqlite, sql]
 image: ./illustration.png
 ---
