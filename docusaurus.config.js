@@ -72,11 +72,11 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-          //   href: 'https://app.mergestat.com/',
-          //   label: 'Try',
-          //   position: 'left',
-          // },
+          {
+            href: 'https://mergestat.com/',
+            label: 'Homepage',
+            position: 'left',
+          },
           {
             href: 'https://github.com/mergestat/mergestat',
             label: 'GitHub',
