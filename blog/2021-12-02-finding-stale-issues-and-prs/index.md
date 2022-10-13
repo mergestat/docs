@@ -9,7 +9,7 @@ I've seen many projects making use of [automation](https://github.com/marketplac
 
 Regardless, *identifying* unanswered issues can be valuable, especially for maintainers to ensure they're addressing user concerns - or even for anyone looking for places to help.
 
-You can use the **MergeStat [GitHub tables](/reference/github-tables)** to identify stale issues or PRs in a repo (or even across many repos).
+You can use the **MergeStat [GitHub tables](/mergestat-lite/reference/github-tables)** to identify stale issues or PRs in a repo (or even across many repos).
 
 :::info
 

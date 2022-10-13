@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MergeStat Docs',
+  title: 'MergeStat Documentation',
   tagline: 'SQL for the software development lifecycle',
   url: 'https://docs.mergestat.com',
   baseUrl: '/',
@@ -59,24 +59,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'MergeStat Docs',
+        // title: 'MergeStat Documentation',
         logo: {
           alt: 'MergeStat Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo-with-text.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'welcome/intro',
+            docId: 'welcome/README',
             position: 'left',
-            label: 'Reference',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://app.mergestat.com/',
-            label: 'Try',
-            position: 'left',
-          },
+          // {
+          //   href: 'https://app.mergestat.com/',
+          //   label: 'Try',
+          //   position: 'left',
+          // },
           {
             href: 'https://github.com/mergestat/mergestat',
             label: 'GitHub',
@@ -93,11 +93,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Reference',
+            title: 'MergeStat',
             items: [
               {
-                label: 'Reference',
-                to: '/',
+                label: 'Homepage',
+                href: 'https://mergestat.com/',
               },
             ],
           },
@@ -127,7 +127,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/mergestat/mergestat',
+                href: 'https://github.com/mergestat/',
               },
             ],
           },
