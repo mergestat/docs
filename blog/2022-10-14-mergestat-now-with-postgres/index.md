@@ -45,4 +45,3 @@ We have some great features planned, and will be spending more time showcasing v
 As usual, our [**community Slack**](https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg) is a great place to find help and ask questions. We're always happy to chat about **MergeStat** there 🎉!
 
 :::
-
