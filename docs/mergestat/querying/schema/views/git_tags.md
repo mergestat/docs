@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# git_git_tagsbranches
+# git_tags
 
 ```sql
 CREATE VIEW 
