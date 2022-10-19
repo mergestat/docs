@@ -11,7 +11,7 @@
             "permanent": true
         },
         { 
-            "source": "/getting-started/installation",
+            "source": "/getting-started-cli/installation",
             "destination": "/mergestat-lite/installation",
             "permanent": true
         },
