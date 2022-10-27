@@ -26,7 +26,7 @@ Keep a lookout for additional features, including:
 - Basic charting and data visualization
 - Query execution history
 
-It's important to note that **as always, the MergeStat PostgreSQL database can be connected to directly** by BI tools, desktop SQL clients, or SQL drivers.
+It's important to note that **as always, the MergeStat PostgreSQL database can be connected directly to** by BI tools, desktop SQL clients, or SQL drivers.
 
 :::info Join our Slack
 
