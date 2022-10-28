@@ -1,7 +1,7 @@
 ---
 title: Introducing In-App SQL Querying
 authors: [patrickdevivo]
-description: We're excited to announce that MergeStat now has built-in SQL querying.
+description: We're excited to announce that MergeStat now has SQL querying built into the management console.
 image: ./query-ui-illustration.png
 tags: [mergestat, sql, postgresql, console]
 ---
@@ -10,10 +10,10 @@ tags: [mergestat, sql, postgresql, console]
 
 Today we're excited to announce the availability of in-app SQL querying in the latest [versions of MergeStat](https://github.com/mergestat/mergestat/releases)! 🎉
 
-![Screenshot of the Query UI](query-ui-illustration.png)
+![Illustration of the Query UI](query-ui-illustration.png)
 
 One of the more significant pain points noted by our early adopters has been the need for *external* tools to access the data MergeStat provides, even for simple, one-off queries.
-Many users (ourselves included) lean on existing data products such as Grafana, Metabase and Superset to consume MergeStat data (in dashboards, alerts and reports).
+Many users (ourselves included) lean on existing data products such as [Grafana](https://grafana.com/), [Metabase](https://www.metabase.com/) and [Superset](https://superset.apache.org/) to consume MergeStat data (in dashboards, alerts and reports).
 
 With the addition of our query interface (in the `Queries` tab of our management console), MergeStat users can now execute SQL directly in our app.
 
