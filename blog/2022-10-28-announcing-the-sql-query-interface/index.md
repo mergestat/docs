@@ -28,6 +28,8 @@ Keep a lookout for additional features, including:
 
 It's important to note that **as always, the MergeStat PostgreSQL database can be connected directly to** by BI tools, desktop SQL clients, or SQL drivers.
 
+Check out the latest [**MergeStat**](https://github.com/mergestat/mergestat) release to get started!
+
 :::info Join our Slack
 
 Our [**community Slack**](https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg) is a great place to find help and ask questions. We're always happy to chat about **MergeStat** there 🎉!
