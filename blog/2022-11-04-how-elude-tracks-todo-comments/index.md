@@ -1,7 +1,7 @@
 ---
 title: How Elude Tracks TODO Comments 📝
 authors: [patrickdevivo]
-description: The team at Elude uses MergeStat to keep track of TODO comments across all their code.
+description: If you’ve spent any time around code, you’ll know that // TODO comments are a fact of life. They're a common pattern, regardless of how you feel about them! The team at Elude uses MergeStat to keep track of TODO comments across all their code.
 image: ./grafana-todos.png
 tags: [mergestat, sql, postgresql, TODO]
 ---
