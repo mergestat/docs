@@ -12,9 +12,8 @@ It allows you to ask questions about the history and contents of your source cod
 For example, it can execute queries that look like this:
 
 ```sql
--- using `mergestat-lite`, our local CLI
--- how many commits have been authored by user@email.com?
-SELECT count(*) FROM commits WHERE author_email = 'user@email.com'
+-- For example, count commits by author across all repositories
+SELECT author_name, count(*) FROM git_commits GROUP BY author_name ORDER BY count(*) DESC
 ```
 
 ## Why?
