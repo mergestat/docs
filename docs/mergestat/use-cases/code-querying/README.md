@@ -1,8 +1,7 @@
 # Code Querying
 
-- [Dependencies](https://github.com/mergestat/mergestat/tree/update-examples/examples/git/dependencies)
-    - [Go Versions](https://github.com/mergestat/mergestat/blob/main/examples/git/dependencies/go)
-    - [React Versions](https://github.com/mergestat/mergestat/blob/main/examples/git/dependencies/react)
+- [Go Versions](https://github.com/mergestat/mergestat/blob/main/examples/git/dependencies/go)
+- [React Versions](https://github.com/mergestat/mergestat/blob/main/examples/git/dependencies/react)
 - [TODO Comments](https://github.com/mergestat/mergestat/tree/main/examples/git/code-todos)
 - [File Detection](https://github.com/mergestat/mergestat/blob/main/examples/github/workflows)
 - [Go Environment Variables](https://github.com/mergestat/mergestat/tree/main/examples/git/go/env-vars)
