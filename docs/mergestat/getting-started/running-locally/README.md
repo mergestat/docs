@@ -27,3 +27,20 @@ Now you can begin adding Git repositories 🎉.
 If you want to use MergeStat on *private* GitHub repos, automatically sync repos from a GitHub org, or use any GitHub API sync types, you will need to add a GitHub [**personal access token**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in the settings area ([`https://localhost:3300/settings`](https://localhost:3300/settings)).
 
 :::
+
+## Accessing Local Repositories
+
+To access local repositories (git repositories on disk), you can bind mount a local directory into the `worker` service.
+To do this, add (or uncomment) the following content to the  `docker-compose.yaml` file:
+
+```yaml
+services:
+  worker:
+    volumes:
+      - ~/projects:/projects   # ~/projects can be any local path on your host, which MergeStat will now be able to access repositories from
+```
+
+After this you can use the _manual repository import_ option to add the repository.
+Use `file://` as the url scheme and the _absolute path_ to the repository within the container, for example, `file:///projects/mergestat`.
+
+![Add local repository manually](local-file-path.png)
