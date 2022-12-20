@@ -30,16 +30,17 @@ If you want to use MergeStat on *private* GitHub repos, automatically sync repos
 
 ## Accessing Local Repositories
 
-To access local repositories, you can mount bind mount a local directory into the `worker` service. To do this, create a local 
-`docker-compose.override.yaml` file with the following content:
+To access local repositories (git repositories on disk), you can bind mount a local directory into the `worker` service.
+To do this, add (or uncomment) the following content to the  `docker-compose.yaml` file:
 
 ```yaml
 services:
-    worker:
-        volumes:
-          - ~/projects:/projects   # can be any local path
+  worker:
+    volumes:
+      - ~/projects:/projects   # ~/projects can be any local path on your host, which MergeStat will now be able to access repositories from
 ```
 
-After this you can use the _manual repository import_ option to add the repository. Use `file://` as the url scheme and the _absolute path_ to the repository within the container, for example, `file:///projects/mergestat`.
+After this you can use the _manual repository import_ option to add the repository.
+Use `file://` as the url scheme and the _absolute path_ to the repository within the container, for example, `file:///projects/mergestat`.
 
 ![Add local repository manually](local-file-path.png)
