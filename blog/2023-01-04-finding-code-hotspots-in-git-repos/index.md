@@ -28,24 +28,6 @@ This [defines](https://understandlegacycode.com/blog/focus-refactoring-with-hots
 
 This bash script looks a lot like what both [MergeStat](https://github.com/mergestat/mergestat) and [MergeStat Lite](https://github.com/mergestat/mergestat-lite) can surface, but using SQL 🎉!
 
-## MergeStat Lite Example
-
-[MergeStat Lite](https://github.com/mergestat/mergestat-lite) (our CLI) can be run against a git repo on disk to surface the same set of file paths:
-
-```sql
-select
-    file_path, count(*)
-from commits, stats('', commits.hash)
-where commits.author_when > date('now', '-12 month')
-and commits.parents < 2 -- ignore merge commits
-group by file_path
-order by count(*) desc
-limit 50
-```
-
-[![Screenshot of MergeStat Lite Example](mergestat-lite-example.jpg)](https://github.com/mergestat/mergestat-lite)
-
-
 ## MergeStat Example
 
 [MergeStat](https://github.com/mergestat/mergestat) can be used to surface this list as well:
@@ -64,6 +46,24 @@ limit 50
 
 [![Screenshot of MergeStat Example](mergestat-example.jpg)](https://github.com/mergestat/mergestat)
 
+## MergeStat Lite Example
+
+[MergeStat Lite](https://github.com/mergestat/mergestat-lite) (our CLI) can be run against a git repo on disk to surface the same set of file paths:
+
+```sql
+select
+    file_path, count(*)
+from commits, stats('', commits.hash)
+where commits.author_when > date('now', '-12 month')
+and commits.parents < 2 -- ignore merge commits
+group by file_path
+order by count(*) desc
+limit 50
+```
+
+[![Screenshot of MergeStat Lite Example](mergestat-lite-example.jpg)](https://github.com/mergestat/mergestat-lite)
+
+
 ## Why bother?
 
-As Nicolas Carlo points out, identifying hotspots in a codebase is an effective way to determine which files are worth examining as candidates for refactor.
+As Nicolas Carlo points out, identifying hotspots in a codebase is an effective way to determine which files are worth examining as candidates for a refactor.
