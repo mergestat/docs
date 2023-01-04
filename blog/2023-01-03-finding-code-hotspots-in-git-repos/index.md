@@ -67,3 +67,12 @@ limit 50
 ## Why bother?
 
 As Nicolas Carlo points out, identifying hotspots in a codebase is an effective way to determine which files are worth examining as candidates for a refactor.
+
+The SQL queries above can be modified to better suit your needs.
+For example:
+
+- Filter for particular file types by extension (maybe you only care about hotspots in `.go` files, for example)
+- Filter out particular directories
+- Modify the time frame
+- Surface hotspots across multiple repositories
+- Filter hotspots based on authors
