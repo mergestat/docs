@@ -37,7 +37,7 @@ select file_path, count(*)
 from git_commits join git_commit_stats on (git_commits.repo_id = git_commit_stats.repo_id and git_commits.hash = git_commit_stats.commit_hash)
 join repos on git_commits.repo_id = repos.id
 where repo like '%mergestat/mergestat' -- limit to a specific repo
-and git_commits.parents < 2
+and git_commits.parents < 2 -- ignore merge commits
 and author_when > now() - '1 year'::interval
 group by file_path
 order by count(*) desc
