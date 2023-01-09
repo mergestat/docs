@@ -7,7 +7,9 @@ In order to:
 3. Run any sync that uses the GitHub API
 
 You will need to authenticate your deployment to GitHub.
-Currently, the only supported authentication mechanism is with a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) (though we are working on alternatives).
+Currently, the only supported authentication mechanism is with a classic [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) (though we are working on alternatives).
+
+![Set a GitHub PAT in GitHub](github-pat-scopes.jpg)
 
 :::tip
 
