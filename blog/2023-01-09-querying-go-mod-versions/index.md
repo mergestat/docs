@@ -43,10 +43,10 @@ This may be important for an internal DevEx or Platform team to understand, or f
 It could serve as a proxy measure for how "up to date" codebases are, whether they are able to support the latest features of the language.
 For instance, Generics were [introduced in `1.18`](https://go.dev/blog/go1.18), and it may be important to know how much of your Go source code is able to make use of them by looking at `go.mod` files.
 
-## Looking at Public Hashicorp `go.mod` Files
+## Looking at Public HashiCorp `go.mod` Files
 
 Let's take a look at the `go.mod` files in some public Git repos.
-Hashicorp is [famously](https://medium.com/hashicorp-engineering/whats-with-all-the-go-ca72c6d47e26) a large Go shop, and many of their core projects are in Go - so let's take a look at all their public repos!
+HashiCorp is [famously](https://medium.com/hashicorp-engineering/whats-with-all-the-go-ca72c6d47e26) a large Go shop, and many of their core projects are in Go - so let's take a look at all their public repos!
 
 Here's how I used MergeStat to do so:
 
@@ -78,7 +78,7 @@ I make sure to enable the `GitHub Repo Metadata` and `Git Files` sync types.
 
 ![Screenshot of the repo auto import once added](hashicorp-auto-import.jpg)
 
-Now, the file contents and metadata from the GitHub API should begin syncing for all public Hashicorp repos 🎉.
+Now, the file contents and metadata from the GitHub API should begin syncing for all public HashiCorp repos 🎉.
 I can run this query to keep track of the initial sync:
 
 ```sql
@@ -98,7 +98,7 @@ GROUP BY primary_language
 ORDER BY count(*) DESC
 ```
 
-![Chart of Hashicorp repos by language](language-count-chart.png)
+![Chart of HashiCorp repos by language](language-count-chart.png)
 
 Looks like **431** are picked up as Go codebases.
 
@@ -106,10 +106,10 @@ Next, let's run the original query from above, but with a small amendment.
 I'll change the `LIKE '%go.mod'` to `LIKE 'go.mod'`, to only identify `go.mod` files in the *root* of a repo.
 This avoids picking up vendored Go modules.
 
-![Hashicorp Go versions](go-versions-chart.png)
+![HashiCorp Go versions](go-versions-chart.png)
 
 And there you have it!
-Looks like most public Hashicorp repos are on `1.18`.
+Looks like most public HashiCorp repos are on `1.18`.
 
 You may notice that the *sum* of all repos in this query is **390**, not **431**.
 This is likely because not all Go repos have a `go.mod` file.
