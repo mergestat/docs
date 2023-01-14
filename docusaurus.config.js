@@ -45,8 +45,8 @@ const config = {
             copyright: `Copyright © ${new Date().getFullYear()} AskGit, Inc.`
           },
           showReadingTime: false,
-          editUrl:
-            'https://github.com/mergestat/docs/edit/main/blog/',
+          editUrl: 'https://github.com/mergestat/docs/edit/main/blog/',
+          blogSidebarCount: 0
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
