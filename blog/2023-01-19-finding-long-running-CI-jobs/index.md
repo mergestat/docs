@@ -54,7 +54,7 @@ ORDER BY 1 DESC
 
 ## Next Up
 These two examples hopefully convey the value of having this type of CI/CD data on hand and accessible with SQL.
-Since this data can sit next to pull requests, commist, code, issues and more, we can augment these queries with additional dimensions to get deeper insights into engineering operations overall.
+Since this data can sit next to pull requests, commits, code, issues and more, we can augment these queries with additional dimensions to get deeper insights into engineering operations overall.
 
 In addition, we're working on some exciting features that will make accessing and using this data much easier.
 In particular, saved queries, charts, dashboards, reports and alerts will make it possible to use this data more effectively.
