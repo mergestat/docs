@@ -60,7 +60,7 @@ In addition, we're working on some exciting features that will make accessing an
 In particular, saved queries, charts, dashboards, reports and alerts will make it possible to use this data more effectively.
 
 - Visualize which repos or teams are using the most CI minutes.
-- Send a Slack alert when a CI run takes longer than 15 minutes.
+- Send a Slack alert when a CI run takes longer than expected (configurable).
 - Track improvements in CI runtimes over different periods and teams, use it to celebrate or communicate up.
 
 Regardless, MergeStat's mission continues to be in service of **data agility** for software engineering.
