@@ -2,7 +2,7 @@
 title: Finding Code Hotspots in Git Repositories 🔥
 authors: [patrickdevivo]
 description: How to identify hotspots in your codebase using MergeStat.
-image: mergestat-example.jpg
+image: ./mergestat-example.jpg
 tags: [mergestat, sql, mergestat-lite, hotspots, code, git]
 ---
 

@@ -2,7 +2,7 @@
 title: Querying Go Mod Versions Across Many Git Repositories 📊
 authors: [patrickdevivo]
 description: MergeStat can be used to query the contents of go.mod files across many git repositories.
-image: queries.gif
+image: ./queries.gif
 tags: [mergestat, sql, go, hashicorp, versions]
 ---
 
