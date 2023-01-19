@@ -2,7 +2,7 @@
 title: Finding Long Running CI Jobs ⌛
 authors: [patrickdevivo]
 description: MergeStat can be used to find long running GitHub actions workflows.
-image: github-actions-longest-runs.png
+image: ./github-actions-longest-runs.png
 tags: [mergestat, sql, ci, github, github actions, devex]
 ---
 

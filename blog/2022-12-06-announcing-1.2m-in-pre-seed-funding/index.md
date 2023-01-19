@@ -2,7 +2,7 @@
 title: MergeStat Announces $1.2m in Pre-Seed Funding
 authors: [patrickdevivo]
 description: We’re proud to announce that MergeStat has raised over $1.2m in pre-seed funding led by OSS Capital, with participation from Caffeinated Capital and prominent angel investors.
-image: queries.gif
+image: ./queries.gif
 tags: [mergestat, sql, pre-seed, announcement]
 ---
 
