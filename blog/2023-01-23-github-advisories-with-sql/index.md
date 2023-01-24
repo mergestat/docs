@@ -150,3 +150,60 @@ ORDER BY extract(year from published) ASC, extract(quarter from published) ASC
 [![Chart showing the number of advisories by publication quarter and ecosystem](advisories-by-quarter-by-ecosystem.png)](advisories-by-quarter-by-ecosystem.png)
 
 (Where the ecosystem is known).
+
+## What packages have the most advisories?
+
+```sql
+SELECT affected_name, affected_ecosystem, count(*)
+FROM github_advisories
+WHERE affected_ecosystem IS NOT NULL
+GROUP BY affected_name, affected_ecosystem
+ORDER BY count(*) DESC
+```
+
+[![Chart showing the number of advisories by package](advisories-by-package.png)](advisories-by-package.png)
+
+Looks like there's a lot going on in `tensorflow`!
+
+## What packages have the most advisories, by ecosystem?
+
+```sql
+SELECT affected_name, affected_ecosystem, count(*)
+FROM github_advisories
+WHERE affected_ecosystem IS NOT NULL AND affected_ecosystem = 'REPLACE_WITH_ECOSYSTEM'
+GROUP BY affected_name, affected_ecosystem
+ORDER BY count(*) DESC
+LIMIT 10
+```
+
+### `PyPI`
+
+[![Chart showing the number of advisories by package in the PyPI ecosystem](advisories-by-package-pypi.png)](advisories-by-package-pypi.png)
+
+### `Maven`
+[![Chart showing the number of advisories by package in the Maven ecosystem](advisories-by-package-maven.png)](advisories-by-package-maven.png)
+
+### `npm`
+[![Chart showing the number of advisories by package in the npm ecosystem](advisories-by-package-npm.png)](advisories-by-package-npm.png)
+
+### `Packagist`
+[![Chart showing the number of advisories by package in the Packagist ecosystem](advisories-by-package-packagist.png)](advisories-by-package-packagist.png)
+
+### `NuGet`
+[![Chart showing the number of advisories by package in the NuGet ecosystem](advisories-by-package-nuget.png)](advisories-by-package-nuget.png)
+
+### `Go`
+[![Chart showing the number of advisories by package in Go ecosystem](advisories-by-package-go.png)](advisories-by-package-go.png)
+
+### `RubyGems`
+[![Chart showing the number of advisories by package in RubyGems ecosystem](advisories-by-package-rubygems.png)](advisories-by-package-rubygems.png)
+
+### `crates.io`
+[![Chart showing the number of advisories by package in crates.io ecosystem](advisories-by-package-crates.png)](advisories-by-package-crates.png)
+
+
+:::info Join our Slack
+
+Our [**community Slack**](https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg) is a great place to find help and ask questions. We're always happy to chat about **MergeStat** there 🎉!
+
+:::
