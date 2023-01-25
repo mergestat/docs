@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 13
 ---
 
 # gitleaks_repo_scans
