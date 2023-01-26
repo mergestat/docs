@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Documentation on how to install mergestat-lite for local, CLI use.
 ---
 
 # Installation

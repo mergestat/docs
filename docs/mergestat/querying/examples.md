@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Where to find example SQL queries that showcase what MergeStat is capable of.
 ---
 
 # Examples

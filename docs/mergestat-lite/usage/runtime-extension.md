@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: MergeStat Lite can also be used as a SQLite run-time loadable extension.
 ---
 
 # SQLite Runtime Extension

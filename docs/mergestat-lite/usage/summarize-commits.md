@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 image: ./summarize-commits-example.png
+description: Running mergestat summarize commits in a repository will output a git stats summary, including a table of metrics broken out by author.
 ---
 
 # Summarize Commits

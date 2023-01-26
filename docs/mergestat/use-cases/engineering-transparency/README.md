@@ -1,3 +1,6 @@
+---
+description: Links to examples related to MergeStat engineering transparency use cases.
+---
 # Engineering Transparency
 
 - [Commits](https://github.com/mergestat/mergestat/tree/main/examples/git/commits)

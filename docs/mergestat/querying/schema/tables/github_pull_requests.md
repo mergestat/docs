@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+description: Schema for the MergeStat github_pull_requests table.
 ---
 
 # github_pull_requests

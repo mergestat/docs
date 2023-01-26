@@ -1,3 +1,6 @@
+---
+description: The following examples show simple mergestat-lite queries that make use of the git tables.
+---
 # Basic Git Queries
 
 The following examples show simple queries that make use of the `git` tables.

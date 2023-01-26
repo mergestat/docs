@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: How to run MergeStat locally using Docker Compose.
 ---
 
 # Running Locally

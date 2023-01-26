@@ -1,5 +1,6 @@
 ---
 sidebar_position: 11
+description: Schema for the MergeStat github_repo_info table.
 ---
 
 # github_repo_info

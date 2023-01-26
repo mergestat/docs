@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Schema for the MergeStat gitleaks_repo_detections view.
 ---
 
 # gitleaks_repo_detections

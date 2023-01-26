@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 slug: /
+description: MergeStat enables SQL queries for data in git repositories (and related sources, such as the GitHub API). It allows you to ask questions about the history and contents of your source code.
 ---
 
 # Intro

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+description: Schema for the MergeStat git_files table.
 ---
 
 # git_files

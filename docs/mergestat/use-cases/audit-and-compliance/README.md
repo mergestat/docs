@@ -1,3 +1,6 @@
+---
+description: Links to examples related to MergeStat audit and compliance use cases.
+---
 # Audit and Compliance
 
 - Change Management Compliance

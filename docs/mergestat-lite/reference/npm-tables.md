@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+description: Documentation for all mergestat-lite tables that have to do with NPM API usage.
 ---
 
 # NPM Registry

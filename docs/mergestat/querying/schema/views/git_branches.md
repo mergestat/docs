@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Schema for the MergeStat git_branches view.
 ---
 
 # git_branches

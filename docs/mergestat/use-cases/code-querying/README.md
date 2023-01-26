@@ -1,3 +1,6 @@
+---
+description: Links to examples related to MergeStat code querying use cases.
+---
 # Code Querying
 
 - [Go Versions](https://github.com/mergestat/mergestat/blob/main/examples/git/dependencies/go)

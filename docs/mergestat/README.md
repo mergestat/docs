@@ -1,3 +1,6 @@
+---
+description: MergeStat is an open-source project to enable analytics for software engineering teams. MergeStat enables SQL queries against data sources involved in building and shipping software, by syncing data into a PostgreSQL database.
+---
 # MergeStat
 
 [**`mergestat`**](https://github.com/mergestat/mergestat) is an open-source project to enable analytics for software engineering teams.

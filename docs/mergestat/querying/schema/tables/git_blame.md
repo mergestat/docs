@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Schema for the MergeStat git_blame table.
 ---
 
 # git_blame

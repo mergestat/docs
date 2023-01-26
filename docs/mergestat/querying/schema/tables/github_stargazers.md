@@ -1,5 +1,6 @@
 ---
 sidebar_position: 12
+description: Schema for the MergeStat github_stargazers table.
 ---
 
 # github_stargazers

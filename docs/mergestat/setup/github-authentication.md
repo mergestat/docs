@@ -1,3 +1,6 @@
+---
+description: Documentation for GitHub authentication requirements in MergeStat.
+---
 # GitHub Authentication
 
 In order to:

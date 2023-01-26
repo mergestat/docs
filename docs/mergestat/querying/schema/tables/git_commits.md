@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+description: Schema for the MergeStat git_commits table.
 ---
 
 # git_commits

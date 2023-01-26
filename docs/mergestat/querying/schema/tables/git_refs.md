@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+description: Schema for the MergeStat git_refs table.
 ---
 
 # git_refs

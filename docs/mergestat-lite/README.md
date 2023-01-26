@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: mergestat-lite is a local CLI for executing SQL queries. It makes use of SQLite to power its query execution environment.
 ---
 # MergeStat Lite
 

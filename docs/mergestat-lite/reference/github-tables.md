@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Documentation for all mergestat-lite tables that have to do with GitHub API usage.
 ---
 
 # GitHub API

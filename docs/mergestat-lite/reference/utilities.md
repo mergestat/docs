@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Documentation for various utilities in mergestat-lite.
 ---
 
 # Utilities
