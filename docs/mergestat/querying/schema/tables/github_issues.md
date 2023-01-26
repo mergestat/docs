@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+description: Schema for the MergeStat github_issues table.
 ---
 
 # github_issues

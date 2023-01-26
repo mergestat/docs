@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+description: Schema for the MergeStat syft_repo_artifacts view.
 ---
 
 # syft_repo_artifacts

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 14
+description: Schema for the MergeStat gosec_repo_scans table.
 ---
 
 # gosec_repo_scans

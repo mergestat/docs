@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Sourcegraph API
+description: Documentation for all mergestat-lite tables that have to do with Sourcegraph API usage.
 ---
 
 # Sourcegraph API (`experimental`!)

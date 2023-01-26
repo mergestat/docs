@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+description: Schema for the MergeStat gosec_repo_detections view.
 ---
 
 # gosec_repo_detections

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 17
+description: Schema for the MergeStat yelp_detect_secrets_repo_scans table.
 ---
 
 # yelp_detect_secrets_repo_scans

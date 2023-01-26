@@ -1,3 +1,6 @@
+---
+description: Documentation for managing repo auto imports in MergeStat.
+---
 # Repo Auto Imports
 
 Repo auto imports can be configured to *automatically* import new repositories from a GitHub organization or user.

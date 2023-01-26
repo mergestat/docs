@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: How to use mergestat-lite to export data to a SQLite archive.
 ---
 
 # Exporting to SQLite

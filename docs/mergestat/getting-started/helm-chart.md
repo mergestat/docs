@@ -1,3 +1,6 @@
+---
+description: How to run MergeStat in Kubernetes with Helm
+---
 # Running in Kubernetes via Helm
 
 **TODO**

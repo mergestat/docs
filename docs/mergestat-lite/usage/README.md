@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: How to run the mergestat-lite CLI locally.
 ---
 
 # Usage

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 15
+description: Schema for the MergeStat syft_repo_scans table.
 ---
 
 # syft_repo_scans

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 16
+description: Schema for the MergeStat trivy_repo_scans table.
 ---
 
 # trivy_repo_scans

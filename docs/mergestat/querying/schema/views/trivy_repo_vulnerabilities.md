@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+description: Schema for the MergeStat trivy_repo_vulnerabilities view.
 ---
 
 # trivy_repo_vulnerabilities

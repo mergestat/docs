@@ -1,5 +1,6 @@
 ---
 sidebar_position: 13
+description: Schema for the MergeStat gitleaks_repo_scans table.
 ---
 
 # gitleaks_repo_scans

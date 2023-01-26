@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Documentation for all mergestat-lite tables that have to do with git repositories.
 ---
 
 # Git Repositories
