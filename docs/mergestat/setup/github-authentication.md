@@ -40,6 +40,12 @@ If you *do not* supply a GitHub PAT, the following sync types will work or not w
 |`GITHUB_REPO_STARS`   |❌          |❌           |
 |`SYFT_REPO_SCAN`      |✅          |❌           |
 |`TRIVY_REPO_SCAN`     |✅          |❌           |
+|`YELP_DETECT_SECRETS_REPO_SCAN`     |✅          |❌           |
+|`GOSEC_REPO_SCAN`     |✅          |❌           |
+|`GITLEAKS_REPO_SCAN`     |✅          |❌           |
+|`OSSF_SCORECARD_REPO_SCAN`     |❌          |❌           |
+|`GITHUB_ACTIONS`      |❌          |❌           |
+
 
 ### With a GitHub PAT
 
@@ -68,5 +74,5 @@ Learn more about repo auto imports [here](repo-auto-imports).
 
 |                    |No GitHub PAT|With GitHub PAT|Required Scopes        |
 |--------------------|-------------|---------------|-----------------------|
-|Org                 |❌            |✴️             |read:org               |
-|User                |❌            |✅              |-                      |
+|Org                 |✅            |✴️             |read:org               |
+|User                |✅            |✅              |-                      |
