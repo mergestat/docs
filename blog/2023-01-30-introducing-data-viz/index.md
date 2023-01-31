@@ -1,7 +1,7 @@
 ---
 title: MergeStat, Now With Data Visualization 📊
 authors: [patrickdevivo]
-description: We're excited to announce that MergeStat now has a data viz feature for SQL.
+description: We're excited to announce that the most recent releases of MergeStat now include basic data visualization capabilities!
 image: ./bar-chart-example.jpg
 tags: [mergestat, sql, data viz, charts]
 ---
@@ -19,6 +19,7 @@ This has been one of the more frequently requested features from our early users
 Support for direct SQL access is not going anywhere however, and nothing prevents more robust data visualizations in other tools.
 
 [![Example of MergeStat data visualization in Grafana](grafana-example.jpg)](grafana-example.jpg)
+*Example of MergeStat data visualization in Grafana*
 
 ** Keep a Lookout for:**
 
