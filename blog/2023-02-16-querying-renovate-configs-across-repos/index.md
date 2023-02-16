@@ -18,6 +18,8 @@ In particular, we've loved:
 Recently, we wanted to know **which of our repos had Renovate installed**, which is a use case several folks have now shared with us!
 This post showcases some of the queries we put together around our use of Renovate.
 
+We [spun up](/mergestat/getting-started/running-locally/) an instance of [MergeStat](https://github.com/mergestat/mergestat) and begin writing some queries 🎉.
+
 ## Which Codebases Have Renovate Installed?
 
 Get the list of repos that have Renovate installed (by looking for a `renovate.json` config file in the root of the repo).
@@ -96,3 +98,52 @@ Here's example output from our codebases:
 |renovate.json                                |6    |
 |.github/workflows/release.yml                |5    |
 |.github/workflows/chromatic.yml              |4    |
+
+## Show the Cumulative Sum of Merged Renovate PRs
+
+How much has Renovate actually been up to - and how much value are we getting from it over time?
+
+```sql
+-- calculate the cumulative sum of merged renovate PRs over time
+WITH data As (
+    SELECT
+        date_trunc('day', created_at) AS day,
+        count(1)
+    FROM github_pull_requests
+    WHERE author_login = 'renovate' AND state = 'MERGED'
+    GROUP BY 1
+)
+SELECT
+    day,
+    sum(count) OVER (ORDER BY day ASC rows BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+FROM data
+```
+
+[![Cumulative sum of merged Renovate PRs over time](cumulative-sum-renovate.jpg)](cumulative-sum-renovate.jpg)
+
+## How Quickly Are Renovate PRs Merged?
+
+What's the distribution of time-to-merge (measured as the number of days between PR creation and merge) of Renovate PRs.
+
+```sql
+SELECT
+    FLOOR((EXTRACT(EPOCH FROM merged_at - created_at)/86400)/5)*5 as bin_floor,
+    count(*)
+FROM github_pull_requests
+WHERE author_login = 'renovate' AND state = 'MERGED'
+GROUP BY 1
+ORDER BY 1
+```
+
+[![Histogram of renovate time-to-merge](histogram-renovate-time-to-merge.jpg)](histogram-renovate-time-to-merge.jpg)
+
+# Conclusion
+
+We were curious to play around with this data to learn about our use of Renovate and the value we've been getting from it.
+If you're a Renovate user, hopefully it's interesting to you as well!
+
+:::info Join our Slack
+
+If this you found this interesting, hop in our [**community Slack**](https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg)! We're always happy to chat about **MergeStat** there 🎉.
+
+:::
