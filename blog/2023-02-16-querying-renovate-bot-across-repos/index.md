@@ -1,12 +1,12 @@
 ---
-title: Querying Renovate Configs Across Repos
+title: Querying Renovate Bot Across Repos w/ SQL
 authors: [patrickdevivo]
 description: Recently, we wanted to know which of our repos had Renovate installed, which is a use case several folks have now shared with us! This post showcases some of the queries we put together around our use of Renovate.
 image: ./renovate-prs-by-state.jpg
 tags: [mergestat, sql, vulnerabilities, security, open-source, renovate]
 ---
 
-# Querying Renovate Configs Across Repos
+# Querying Renovate Bot Across Repos w/ SQL
 
 We've been big fans of [Renovate](https://www.mend.io/free-developer-tools/renovate/), an open-source tool and [GitHub app](https://github.com/marketplace/renovate) that automates dependency management by opening PRs into your repos.
 In particular, we've loved:
