@@ -1,8 +1,8 @@
 ---
 title: Identifying Open-Source Library Risk Using MergeStat (Part 1)
 authors: [peterfreiberg]
-description: One topic that arises frequently in my work is understanding what open-source code is in use in an organisation, and where that organisation may have vulnerabilities. Moreover, how do we ensure consistent visibility into our open-source risk profile over time?
-# image: ./renovate-prs-by-state.jpg
+description: A topic that arises frequently in my work is understanding what open-source code is in use in an organisation, and where that organisation may have vulnerabilities. Moreover, how do we ensure consistent visibility into our open-source risk profile over time?
+image: ./most-common-sbom-artifacts.jpg
 tags: [mergestat, sql, vulnerabilities, security, open-source]
 ---
 
@@ -30,7 +30,7 @@ I think it’s really useful for AppSec or DevSecOps people to be able to query 
 
 We’re going to explore a few use cases for querying an organisation’s code bases, with a little help from automation and some data augmentation, to identify some specific areas of risk. 
 
-### Show me XYZ opensource package manager files, so I can look for known vulnerabilities
+### Show me XYZ open source package manager files, so I can look for known vulnerabilities
 
 In this example, we’re simply going to look for known package manager file types, in this case maven.
 
@@ -42,9 +42,9 @@ INNER JOIN repos ON git_files.repo_id = repos.id
 WHERE path LIKE '%pom.xml%'
 ```
 
-From this generated list of file, we can do our own analysis, if you’re already using an SCA tool for your organisation you can run your own analysis.  Keep in mind that having a security tool for your organisation, doesn’t mean everyone is using it (yet).  
+From this generated list of files, we can do our own analysis. If you’re already using an SCA tool for your organisation you can also run your own analysis. Keep in mind that having a security tool for your organisation, doesn’t mean everyone is using it (yet).  
 
-If we find a potential vulnerability in a file, we can also query who the last author (developer) and who committed it to the repo again using another query.
+If we find a potential vulnerability in a file, we can also query who the last author (developer) was and who committed it to the repo again using another query:
 
 ```sql
 SELECT author_email, author_when, committer_email, committer_when
@@ -56,13 +56,13 @@ repo = 'https://github.com/YOUR_ORG/REPO'
 LIMIT 1
 ```
 
-While the last developer or committer may not have added the library which has the issue, at least they have looked at the file recently and in a good position to collaborate with us.  
+While the last developer or committer may not have *added* the library which has the issue, at least they have looked at the file recently and in a good position to collaborate with us.
 
 ### Across all our Git repos, show the most frequently used 3rd party dependencies
 
 One of the first and most fundamental challenges is simply understanding what 3rd party, open-source code a company uses. This is often difficult to aggregate across many code bases and teams.
 
-It can be trivial to access this information in a **single** repo, but across many (hundreds or even thousands), it can be much more difficult, at least without some automation (or a tool like MergeStat). 
+It can be trivial to access this information in a **single** repo, but across many (hundreds or even thousands), it can be much more difficult, at least without some automation (or a tool like [MergeStat](https://github.com/mergestat/mergestat)). 
 
 MergeStat is able to run open-source SBOM generators on all the Git repositories in an organisation, and store their output in PostgreSQL. In this example, [Syft](https://github.com/anchore/syft) is used to generate and store SBOMs for supported package managers, allowing us to execute a query like this one:
 
@@ -77,6 +77,8 @@ ORDER BY 1 DESC
 This gives us the most common SBOM artifacts in use across all repositories. This is a great starting point, as it gives us a sense of what languages and tools are in use throughout a company’s code. This is an “out of the box” feature that MergeStat provides. 
 
 It also gives us a list of any “key” dependencies - the 3rd party libraries that are most commonly relied on throughout an organisation.
+
+[![Most common SBOM artifacts across all repos](most-common-sbom-artifacts.jpg)](most-common-sbom-artifacts.jpg)
 
 ### Show me the oldest files that contain security vulnerabilities
 
@@ -99,9 +101,9 @@ This query uses the Trivy integration to surface the top 10 oldest files (by whe
 
 The key point is that once you can easily query or find the file types you want, running frequent analysis is easier and more repeatable. 
 
-### Show me *who* typically maintains 3rd party dependencies across codebases?
+### Show me *who* typically maintains 3rd party dependencies across codebases
 
-It’s one thing to know where vulnerabilities are, it’s another thing entirely to find the right people and process to mitigate these vulnerabilities with patches or upgrades. The last person to modify to file is probably a good person to help investigate and fix an issue. An additional query here that’s very valuable to me, is one that shows **who are the most frequent committers to dependency manifest files in recent history**?
+It’s one thing to know where vulnerabilities are, it’s another thing entirely to find the right people and process to mitigate these vulnerabilities with patches or upgrades. The last person to modify a file is probably a good person to help investigate and fix an issue. An additional query here that’s very valuable to me, is one that shows **who are the most frequent committers to dependency manifest files in recent history**?
 
 ```sql
 -- show authors with most (non-merge) commits that change package.json files in the last year
@@ -131,3 +133,9 @@ These queries can be expanded on to answer additional questions:
 Once you have your git data sources plumbed into MergeStat, you can query as needed alternating between engaging in discovery and analysing immediate issues. 
 
 In **Part 2**, we’ll cover how to use MergeStat to starting identify overall exposure to a **single vulnerability** (such as a `Log4Shell`) that may be thrust upon your day and answer questions in a similar way. Stay tuned!
+
+:::info Join our Slack
+
+If this you found this interesting, hop in our [**community Slack**](https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg)! We're always happy to chat about **MergeStat** there 🎉.
+
+:::
