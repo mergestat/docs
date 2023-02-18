@@ -62,7 +62,7 @@ While the last developer or committer may not have added the library which has t
 
 One of the first and most fundamental challenges is simply understanding what 3rd party, open-source code a company uses. This is often difficult to aggregate across many code bases and teams.
 
-It can be trivial to access this information in a ******single****** repo, but across many (hundreds or even thousands), it can be much more difficult, at least without some automation (or a tool like MergeStat). 
+It can be trivial to access this information in a **single** repo, but across many (hundreds or even thousands), it can be much more difficult, at least without some automation (or a tool like MergeStat). 
 
 MergeStat is able to run open-source SBOM generators on all the Git repositories in an organisation, and store their output in PostgreSQL. In this example, [Syft](https://github.com/anchore/syft) is used to generate and store SBOMs for supported package managers, allowing us to execute a query like this one:
 
@@ -80,7 +80,7 @@ It also gives us a list of any “key” dependencies - the 3rd party libraries 
 
 ### Show me the oldest files that contain security vulnerabilities
 
-Similar to how MergeStat can generate an SBOM across many repos, it can run a vulnerability scan using a tool such as [Trivy](https://github.com/aquasecurity/trivy) or [Grype](https://github.com/anchore/grype). Doing so allows us to surface detected vulnerabilities across the repos in an organisation. Combining this with Git activity allows us to also filter vulnerabilities based on **************when************** the related file was last modified. This allows us to order by the vulnerabilities in the least recently modified files first (as these may be a top priority to address, as they’ve been around for a while).
+Similar to how MergeStat can generate an SBOM across many repos, it can run a vulnerability scan using a tool such as [Trivy](https://github.com/aquasecurity/trivy) or [Grype](https://github.com/anchore/grype). Doing so allows us to surface detected vulnerabilities across the repos in an organisation. Combining this with Git activity allows us to also filter vulnerabilities based on **when** the related file was last modified. This allows us to order by the vulnerabilities in the least recently modified files first (as these may be a top priority to address, as they’ve been around for a while).
 
 ```sql
 -- SELECT the top 10 oldest files that contain CRITICAL vulnerabilities
@@ -99,9 +99,9 @@ This query uses the Trivy integration to surface the top 10 oldest files (by whe
 
 The key point is that once you can easily query or find the file types you want, running frequent analysis is easier and more repeatable. 
 
-### Show me ***who*** typically maintains 3rd party dependencies across codebases?
+### Show me *who* typically maintains 3rd party dependencies across codebases?
 
-It’s one thing to know where vulnerabilities are, it’s another thing entirely to find the right people and process to mitigate these vulnerabilities with patches or upgrades. The last person to modify to file is probably a good person to help investigate and fix an issue. An additional query here that’s very valuable to me, is one that shows **************************************************************who are the most frequent committers to dependency manifest files in recent history**************************************************************? 
+It’s one thing to know where vulnerabilities are, it’s another thing entirely to find the right people and process to mitigate these vulnerabilities with patches or upgrades. The last person to modify to file is probably a good person to help investigate and fix an issue. An additional query here that’s very valuable to me, is one that shows **who are the most frequent committers to dependency manifest files in recent history**?
 
 ```sql
 -- show authors with most (non-merge) commits that change package.json files in the last year
@@ -126,8 +126,8 @@ These queries are a way to produce a high-level survey of the open-source risk p
 These queries can be expanded on to answer additional questions:
 
 - What teams or code bases do a better job of keeping dependencies up to date and vulnerabilities out of `main`?
-- Are there individuals or teams who typically update dependencies ******across****** many code bases in the organisation? If so, are these good people to target for additional questions about security maintenance?
+- Are there individuals or teams who typically update dependencies **across** many code bases in the organisation? If so, are these good people to target for additional questions about security maintenance?
 
 Once you have your git data sources plumbed into MergeStat, you can query as needed alternating between engaging in discovery and analysing immediate issues. 
 
-In **Part 2**, we’ll cover how to use MergeStat to starting identify overall exposure to a ****************************************single vulnerability**************************************** (such as a `Log4Shell`) that may be thrust upon your day and answer questions in a similar way. Stay tuned!
+In **Part 2**, we’ll cover how to use MergeStat to starting identify overall exposure to a **single vulnerability** (such as a `Log4Shell`) that may be thrust upon your day and answer questions in a similar way. Stay tuned!
