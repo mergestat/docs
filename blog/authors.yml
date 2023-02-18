@@ -3,3 +3,9 @@ patrickdevivo:
   title: Founder & CEO
   url: https://github.com/patrickdevivo
   image_url: https://github.com/patrickdevivo.png
+
+peterfreiberg:
+  name: Peter Freiberg
+  title: Consultant. DevSecOps. Application Security.
+  url: https://www.linkedin.com/in/peterfreiberg/
+  image_url: /img/authors/peterfreiberg.jpeg
