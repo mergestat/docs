@@ -10,12 +10,12 @@ tags: [mergestat, sql, grafana, DORA, open-source, git]
 
 In software, as maybe in life, *change* is as inevitable as death and taxes 🙂.
 SCM/VCS tools like Git, which manage code changes, are fundamental to anyone developing code.
-If [DORA](https://docs.gitlab.com/ee/user/analytics/dora_metrics.html) is your thing, you'll also know that "deployment frequency" is a key metric (as a proxy for measuring development velocity).
+If [DORA](https://docs.gitlab.com/ee/user/analytics/dora_metrics.html) is your thing, you'll also know that "deployment frequency" is a key metric (as a proxy for tracking measuring development velocity over time).
 
 In our work on [MergeStat](https://github.com/mergestat/mergestat), we've often wanted to understand **how frequently we ship code**.
-In particular, we want to ensure that the work we do makes it's way into the hands of our users on a regular basis.
-Luckily, we've been able to *use* MergeStat as a way to extract measures of our release frequency.
-We've built an internal dashboard using [Grafana](https://grafana.com/) to support our activities around managing our releases as well!
+In particular, we want to ensure that our work makes it's way into the hands of our users on a regular basis.
+Luckily, we've been able to *use* MergeStat to keep tabs on our release frequency.
+We've built an internal dashboard using [Grafana](https://grafana.com/) to support our activities around managing our releases:
 
 [![Screenshot of Grafana dashboard tracking our release frequency](grafana-release-dashboard.jpg)](grafana-release-dashboard.jpg)
 
@@ -60,6 +60,7 @@ SELECT ROUND(EXTRACT(EPOCH FROM avg(since_prev_tag))/(86400), 2) AS mean_time_be
 
 - We'd like to *alert* to our Slack when it's been too long since a release
 - We'd like a regular push to our Slack for a regular update on how our release cadence is
+- 
 
 :::info Join our Slack
 
