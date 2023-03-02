@@ -10,7 +10,7 @@ tags: [mergestat, sql, grafana, DORA, open-source, git]
 
 In software, as maybe in life, *change* is as inevitable as death and taxes 🙂.
 SCM/VCS tools like Git, which manage code changes, are fundamental to anyone developing code.
-If [DORA](https://docs.gitlab.com/ee/user/analytics/dora_metrics.html) is your thing, you'll also know that "deployment frequency" is a key metric (as a proxy for tracking measuring development velocity over time).
+If [DORA](https://docs.gitlab.com/ee/user/analytics/dora_metrics.html) is your thing, you'll also know that "deployment frequency" is a key metric (as a proxy for measuring development velocity over time).
 
 In our work on [MergeStat](https://github.com/mergestat/mergestat), we've often wanted to understand **how frequently we ship code**.
 In particular, we want to ensure that our work makes it's way into the hands of our users on a regular basis.
