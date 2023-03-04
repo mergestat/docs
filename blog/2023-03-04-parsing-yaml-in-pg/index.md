@@ -1,7 +1,7 @@
 ---
 title: Querying YAML in PostgreSQL with PLV8 🐘
 authors: [patrickdevivo]
-description: MergeStat's mission is to make it possible to query *anything* involved in building & shipping software with SQL. Recently, we had a user looking to query YAML files across their git repositories, wanting to extract and aggregate values in their config files.
+description: MergeStat's mission is to make it possible to query *anything* involved in building & shipping software with SQL. Recently, we had a user looking to query YAML files across their git repos, wanting to extract and aggregate values from config files.
 image: ./pg-logo.png
 tags: [mergestat, sql, yaml, postgres, open-source]
 ---
