@@ -60,7 +60,7 @@ This will produce a similar table result as above, this time with files that con
 
 Now to find out who can help us determine if we’re actually vulnerable. Hopefully we have a version number in the `pom.xml` or equivalent build tool. If we have to dive deeper to check deployment status then we probably need to find the last person who touched the package manager file. 
 
-Here’s a query to find all developers and committers who lasted modified the maven files which look like they use Log4J:
+Here’s a query to find all developers and committers who last modified the maven files which look like they use Log4J:
 
 ```sql
 --- TODO(amenowanna) this needs some help
