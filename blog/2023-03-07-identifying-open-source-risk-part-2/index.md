@@ -2,7 +2,7 @@
 title: Are We Vulnerable? (e.g. Log4Shell) - Identifying Open-Source Library Risk Using MergeStat (Part 2)
 authors: [peterfreiberg]
 description: Previously, we looked at a few ways we can look at open-source library risk across our code. In this article, we’ll look at how we can search for new known vulnerabilities once details become available. 
-# image: ./most-common-sbom-artifacts.jpg
+image: ./log4j.png
 tags: [mergestat, sql, vulnerabilities, security, open-source]
 ---
 
@@ -19,6 +19,8 @@ So, an email, article or colleague disrupts whatever you were doing and proclaim
 If you can query your code, you can start finding where you might be exploitable. If you’re new to [MergeStat](https://github.com/mergestat/mergestat), the `tldr` is it's a tool to aggregate multiple Git sources, organisations and repos in a literal SQL interface (with some other magic sauce utilities too)
 
 In this case, let’s take a look at Log4Shell. Here’s a rundown of the advisory: [https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a](https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a) 
+
+![Log4J Logo](log4j.png)
 
 One of their first steps was *“Identifying assets affected by Log4Shell and other Log4j-related vulnerabilities”*
 
