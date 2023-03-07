@@ -65,13 +65,36 @@ Now to find out who can help us determine if we’re actually vulnerable. Hopefu
 Here’s a query to find all developers and committers who last modified the maven files which look like they use Log4J:
 
 ```sql
---- TODO(amenowanna) this needs some help
-SELECT repo, auth_empath 
+SELECT DISTINCT ON (repo, path) repo, path, author_name, author_email, author_when, committer_name, committer_email, committer_when
 FROM git_files
+INNER JOIN git_commit_stats ON git_files.repo_id = git_commit_stats.repo_id AND git_files.path = git_commit_stats.file_path
+INNER JOIN git_commits ON git_commit_stats.repo_id = git_commits.repo_id AND git_commit_stats.commit_hash = git_commits.hash
 INNER JOIN repos ON git_files.repo_id = repos.id
-WHERE path LIKE '%pom.xml' AND contents LIKE '%log4j%'
-AND "SOME OTHER QUERY I NEED To thiNK ABOUT"
+WHERE path LIKE '%pom.xml' AND contents LIKE '%log4j%' AND parents < 2
+ORDER BY repo, path, committer_when DESC
 ```
+
+Our results should look something like:
+
+| repo | path | author_name | author_email | author_when | committer_name | committer_email | committer_when |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| https://github.com/ORG-A/repo1 | service/pom.xml | Bob | bob@xyz.com | 2021-06-01T08:30:36Z | Alice | alice@alice.com | 2021-06-01T08:30:36Z |
+| https://int.xyz/TEAM-B/repoY | pom.xml | Josue | josue@aaa.com | 2021-11-01T09:42:36Z | Patrick | pd@there.com | 2021-06-01T08:30:36Z |
+| … | … | … | … | … | … | … | … |
+
+The above query has some complexity, but this should be easy(ish) for anyone to modify, changing the path and searching on strings based on your use case.  
+
+If the above query has found people who are no longer in your organisation, then you can follow up by finding whoever was the last to author or commit to the repo:
+
+```sql
+SELECT *
+FROM git_commits
+INNER JOIN repos ON git_commits.repo_id = repos.id
+WHERE repo = 'https://github.com/YOUR_ORG/YOUR_REPO' -- replace with your repo
+ORDER BY committer_when DESC
+LIMIT 1
+```
+
 
 ## What are the limitations of this process?
 
