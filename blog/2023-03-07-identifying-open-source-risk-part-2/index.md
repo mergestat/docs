@@ -16,13 +16,13 @@ Previously, we looked at a [few ways we can look at open-source library risk acr
 
 So, an email, article or colleague disrupts whatever you were doing and proclaims “XYZ library is vulnerable and it’s horrible!”. How do you tell if you’re vulnerable to XYZ vulnerability?
 
-If you can query your code, you can start finding where you might be exploitable. If you’re new to [MergeStat](https://github.com/mergestat/mergestat), the `tldr` is it's a tool to aggregate multiple Git sources, organisations and repos in a literal SQL interface (with some other magic sauce utilities too)
+If you can query your code, you can start finding where you might be exploitable. If you’re new to [MergeStat](https://github.com/mergestat/mergestat), the `tldr` is it's a tool to aggregate multiple Git sources, organisations and repos in a literal SQL interface (with some other magic sauce utilities too).
 
 In this case, let’s take a look at Log4Shell. Here’s a rundown of the advisory: [https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a](https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a) 
 
 ![Log4J Logo](log4j.png)
 
-One of their first steps was *“Identifying assets affected by Log4Shell and other Log4j-related vulnerabilities”*
+One of their first steps was *“Identifying assets affected by Log4Shell and other Log4j-related vulnerabilities.”*
 
 Now, assets is going to involve a lot of things that are off the shelf, but from a “knowing our code” angle there’s a few things we can do.
 
@@ -32,7 +32,7 @@ Our high-level process using [MergeStat](https://github.com/mergestat/mergestat)
 2. Search for Log4J (we can get more specific, but let’s start here)
 3. Find the last author or committer who touched the file to assist with assessing and remediation
 
-Find all the maven package manager files
+Find all the maven package manager files:
 
 ```sql
 SELECT repo, path 
@@ -49,7 +49,7 @@ We’re going to get something that looks like the following
 | https://git.internal.xyz/TEAM-B/repoY | pom.xml |
 | ... | ... |
 
-That’s pretty straight forward, but what we really want is to find all the maven files which look like they use Log4J.
+That’s pretty straight forward, but what we *really* want is to find all the maven files which look like they use Log4J.
 
 ```sql
 SELECT repo, path 
@@ -58,7 +58,7 @@ INNER JOIN repos ON git_files.repo_id = repos.id
 WHERE path LIKE '%pom.xml' AND contents LIKE '%log4j%'
 ```
 
-This will produce a similar table result as above, this time with files that contain Log4J. Now, this is pretty broad keyword search, but if you take a look at the [Log4J](https://logging.apache.org/log4j/2.x/maven-artifacts.html) documentation this should catch most of the situations where Log4J appears, even if you change the package manager filename (e.g. `build.gradle`, `build.sbt` etc) and even the [Clojure build tool](https://clojure.org/guides/tools_build) if that’s your thing.  
+This will produce a similar table of results as above, this time with files that contain Log4J. Now, this is pretty broad keyword search, but if you take a look at the [Log4J](https://logging.apache.org/log4j/2.x/maven-artifacts.html) documentation this should catch most of the situations where Log4J appears, even if you change the package manager filename (e.g. `build.gradle`, `build.sbt` etc.) and even the [Clojure build tool](https://clojure.org/guides/tools_build) if that’s your thing.  
 
 Now to find out who can help us determine if we’re actually vulnerable. Hopefully we have a version number in the `pom.xml` or equivalent build tool. If we have to dive deeper to check deployment status then we probably need to find the last person who touched the package manager file. 
 
