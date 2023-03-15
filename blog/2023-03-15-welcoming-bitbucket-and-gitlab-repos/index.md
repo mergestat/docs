@@ -6,7 +6,6 @@ image: ./git-source-example.jpg
 tags: [mergestat, sql, git, open-source, bitbucket, gitlab, github]
 ---
 
-
 # Welcoming Bitbucket and GitLab Repos 🎉
 
 GitHub often *feels* like the center of the developer universe, but *a lot* of developers really call [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) home.
