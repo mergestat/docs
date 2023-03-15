@@ -9,18 +9,14 @@ In order to:
 2. Automatically import repos from a GitHub org
 3. Run any sync that uses the GitHub API
 
-You will need to authenticate your deployment to GitHub.
+You will need to authenticate your  GitHub **Git Source**.
 Currently, the only supported authentication mechanism is with a classic [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) (though we are working on alternatives).
 
-![Set a GitHub PAT in GitHub](github-pat-scopes.jpg)
+![Create a GitHub PAT in GitHub](github-pat-scopes.jpg)
 
-:::tip
+You may set the GitHub authentication on the detail view of a GitHub **Git Source**.
 
-You can set a GitHub PAT in the [`/settings`](http://localhost:3300/settings) page of your MergeStat instance.
-
-:::
-
-![Set a GitHub PAT in the management UI (screenshot)](setting-github-pat.jpg)
+![Set a GitHub PAT for a Git Source](setting-github-pat.jpg)
 
 ## Sync Types
 
