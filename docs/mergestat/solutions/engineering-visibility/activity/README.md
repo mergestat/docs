@@ -29,3 +29,10 @@ In addition, tools such as [dbt](https://www.getdbt.com/) can be used to define 
 We maintain [**this dbt project**](https://github.com/mergestat/mergestat-git-dbt) to showcase how raw git commit activity data can be turned into rollups and metrics for an analysis on the git activity of an engineering org.
 
 [![Relatative repo activity](rel-repo-activity.jpg)](rel-repo-activity.jpg)
+
+:::info More on the Way!
+
+We're putting together more examples of how git activity can be used to extract valuable insights about an engineering organization.
+Stay tuned for more!
+
+:::
