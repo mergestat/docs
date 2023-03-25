@@ -41,9 +41,9 @@ Stay tuned for more!
 
 It can be important to know how many **active contributors** a project has:
 
-- Many SaaS products charge based on the number of "active developers" (number of people who've committed code within a time window)
-- An evaluation of the *health* of an open-source or internal codebase should take into account the number of recent contributors as a proxy for understand how maintained a codebase is
-- Finding *who* the most recent contributors are to a project is a useful way to identify the right people to contact with questions about that project
+- Many SaaS products charge based on the number of "active developers" (number of people who've committed code within a time window).
+- An evaluation of the *health* of an open-source or internal codebase should take into account the number of recent contributors. This can be a proxy for how maintained a codebase is.
+- Finding *who* the most recent contributors are to a project is a useful way to identify the right people to contact with questions.
 
 #### Show the monthly count of unique authors (by email)
 
