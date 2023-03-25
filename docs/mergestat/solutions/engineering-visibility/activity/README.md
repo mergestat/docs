@@ -36,3 +36,35 @@ We're putting together more examples of how git activity can be used to extract 
 Stay tuned for more!
 
 :::
+
+### Active Contributors
+
+It can be important to know how many **active contributors** a project has:
+
+- Many SaaS products charge based on the number of "active developers" (number of people who've committed code within a time window)
+- An evaluation of the *health* of an open-source or internal codebase should take into account the number of recent contributors as a proxy for understand how maintained a codebase is
+- Finding *who* the most recent contributors are to a project is a useful way to identify the right people to contact with questions about that project
+
+#### Show the monthly count of unique authors (by email)
+
+```sql
+SELECT
+    date_trunc('month', author_when),
+    count(distinct author_email)
+FROM git_commits
+JOIN repos ON repos.id = git_commits.repo_id
+-- WHERE repo LIKE '...' -- uncomment to filter by repo
+GROUP BY 1
+ORDER BY 1 DESC
+```
+
+#### Show a list of authors in the last 90 days
+
+```sql
+SELECT
+    DISTINCT(author_email),
+    author_name
+FROM git_commits
+JOIN repos ON repos.id = git_commits.repo_id
+WHERE author_when > now() - '90 days'::interval
+```
