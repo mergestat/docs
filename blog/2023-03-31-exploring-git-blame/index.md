@@ -1,7 +1,8 @@
 ---
 title: Exploring Git Blame w/ SQL 🌎
 authors: [patrickdevivo]
-description: One of MergeStat's more unusual data syncs is `GIT_BLAME`. It's unusual because the output of `git blame` is typically not viewed *in aggregate*, let alone with SQL 🙂. We spent some time playing with this data, and ended up finding some interesting queries as a result!
+description: One of MergeStat's more unusual data syncs is `GIT_BLAME`. It's unusual because the output of `git blame` is typically not viewed *in aggregate*, let alone with SQL 🙂. We spent some time playing with this data, and came up with some interesting queries! We also learned a bit about the MongoDB source code running these queries (from the time of writing)
+image: ./MongoDB_ForestGreen.png
 tags: [mergestat, sql, git, open-source, blame]
 ---
 
