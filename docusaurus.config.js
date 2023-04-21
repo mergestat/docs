@@ -16,6 +16,8 @@ const config = {
   organizationName: 'mergestat', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+
   scripts: [
     "/segment.js",
     {
