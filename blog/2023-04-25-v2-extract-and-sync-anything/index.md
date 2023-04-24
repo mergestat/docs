@@ -24,13 +24,6 @@ This means working with data from open-source code scanners such as [`gosec`](ht
 
 **Check it out!**
 
-## Additional Notes
-
-- Container syncs require that our worker run in Docker privileged mode for now.
-- GitHub API syncs now use the [`octokit` SDK](https://github.com/octokit/octokit.js/), which automatically handles request retries.
-- Currently, syncs in private Docker registries are yet supported.
-
-
 :::info Join our Slack
 
 Come join our [**community Slack**](https://join.slack.com/t/mergestatcommunity/shared_invite/zt-xvvtvcz9-w3JJVIdhLgEWrVrKKNXOYg)! We're always happy to chat about **MergeStat** there 🎉.
