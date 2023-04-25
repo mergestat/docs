@@ -8,7 +8,6 @@ description: MergeStat enables SQL queries for data in git repositories (and rel
 
 MergeStat enables **SQL queries** for data in git repositories (and related sources, such as the GitHub API).
 It allows you to ask questions about the history and contents of your source code.
-<!-- It's both an [open-source command line tool](https://github.com/mergestat/mergestat) and a [web application](https://app.mergestat.com/). -->
 
 For example, it can execute queries that look like this:
 
@@ -19,7 +18,7 @@ SELECT author_name, count(*) FROM git_commits GROUP BY author_name ORDER BY coun
 
 ## Why?
 
-Querying source code and commit history with SQL can be an effective way to extract insights from your software development work, for both various operational use cases.
+Querying source code and commit history with SQL can be an effective way to extract insights from your software development work, for various operational use cases.
 For instance:
 
 1. Engineering transparency

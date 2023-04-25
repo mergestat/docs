@@ -26,24 +26,22 @@ If you *do not* supply a GitHub PAT, the following sync types will work or not w
 
 |Sync Type           |Public Repo|Private Repo|
 |--------------------|-----------|------------|
-|`GIT_BLAME`           |✅          |❌           |
-|`GIT_COMMITS`         |✅          |❌           |
-|`GIT_COMMIT_STATS`    |✅          |❌           |
-|`GIT_FILES`           |✅          |❌           |
-|`GIT_REFS`            |✅          |❌           |
-|`GITHUB_PR_COMMITS`   |❌          |❌           |
-|`GITHUB_PR_REVIEWS`   |❌          |❌           |
-|`GITHUB_REPO_ISSUES`  |❌          |❌           |
-|`GITHUB_REPO_METADATA`|❌          |❌           |
-|`GITHUB_REPO_PRS`     |❌          |❌           |
-|`GITHUB_REPO_STARS`   |❌          |❌           |
-|`SYFT_REPO_SCAN`      |✅          |❌           |
-|`TRIVY_REPO_SCAN`     |✅          |❌           |
-|`YELP_DETECT_SECRETS_REPO_SCAN`     |✅          |❌           |
-|`GOSEC_REPO_SCAN`     |✅          |❌           |
-|`GITLEAKS_REPO_SCAN`     |✅          |❌           |
-|`OSSF_SCORECARD_REPO_SCAN`     |❌          |❌           |
-|`GITHUB_ACTIONS`      |❌          |❌           |
+|[`git-blame`](https://github.com/mergestat/syncs/tree/main/syncs/git-blame)           |✅          |❌           |
+|[`git-commits`](https://github.com/mergestat/syncs/tree/main/syncs/git-commits)         |✅          |❌           |
+|[`git-commit-stats`](https://github.com/mergestat/syncs/tree/main/syncs/git-commit-stats)    |✅          |❌           |
+|[`git-files`](https://github.com/mergestat/syncs/tree/main/syncs/git-files)           |✅          |❌           |
+|[`git-refs`](https://github.com/mergestat/syncs/tree/main/syncs/git-refs)            |✅          |❌           |
+|[`github-pull-request-commits`](https://github.com/mergestat/syncs/tree/main/syncs/github-pull-request-commits)   |❌          |❌           |
+|[`github-pull-request-reviews`](https://github.com/mergestat/syncs/tree/main/syncs/github-pull-request-reviews)   |❌          |❌           |
+|[`github-issues`](https://github.com/mergestat/syncs/tree/main/syncs/github-issues)  |❌          |❌           |
+|[`github-repo-info`](https://github.com/mergestat/syncs/tree/main/syncs/github-repo-info)|❌          |❌           |
+|[`github-pull-requests`](https://github.com/mergestat/syncs/tree/main/syncs/github-pull-requests)     |❌          |❌           |
+|[`github-repo-stargazers`](https://github.com/mergestat/syncs/tree/main/syncs/github-repo-stargazers)   |❌          |❌           |
+|[`scan-syft`](https://github.com/mergestat/syncs/tree/main/syncs/scan-syft)      |✅          |❌           |
+|[`scan-trivy`](https://github.com/mergestat/syncs/tree/main/syncs/scan-trivy)     |✅          |❌           |
+|[`scan-yelp-detect-secrets`](https://github.com/mergestat/syncs/tree/main/syncs/scan-yelp-detect-secrets)     |✅          |❌           |
+|[`scan-gosec`](https://github.com/mergestat/syncs/tree/main/syncs/scan-gosec)     |✅          |❌           |
+|[`scan-gitleaks`](https://github.com/mergestat/syncs/tree/main/syncs/scan-gitleaks)     |✅          |❌           |
 
 
 ### With a GitHub PAT
@@ -52,19 +50,19 @@ If you *do* supply a GitHub PAT, the following sync types will work with no scop
 
 |Sync Type           |Public Repo|Private Repo|Required Scopes for a Public Repo |Required Scopes for a Private Repo |
 |--------------------|-----------|------------|-----------------------|----------------------------------|
-|`GIT_BLAME`           |✅          |✴️          |-                      |`repo`                              |
-|`GIT_COMMITS`         |✅          |✴️          |-                      |`repo`                              |
-|`GIT_COMMIT_STATS`    |✅          |✴️          |-                      |`repo`                              |
-|`GIT_FILES`           |✅          |✴️          |-                      |`repo`                              |
-|`GITHUB_PR_COMMITS`   |✅          |✴️          |-                      |`repo`                              |
-|`GITHUB_PR_REVIEWS`   |✅          |✴️          |-                      |`repo`                              |
-|`GITHUB_REPO_ISSUES`  |✅          |✴️          |-                      |`repo`                              |
-|`GITHUB_REPO_METADATA`|✅          |✴️          |-                      |`repo`                              |
-|`GITHUB_REPO_PRS`     |✅          |✴️          |-                      |`repo`                              |
-|`GITHUB_REPO_STARS`   |✴️         |✴️          |`user:email` OR `read:user`|(`user:email` OR `read:user`) AND `repo`|
-|`GIT_REFS`            |✅          |✴️          |-                      |`repo`                              |
-|`SYFT_REPO_SCAN`      |✅          |✴️          |-                      |`repo`                              |
-|`TRIVY_REPO_SCAN`     |✅          |✴️          |-                      |`repo`                              |
+|[`git-blame`](https://github.com/mergestat/syncs/tree/main/syncs/git-blame)           |✅          |✴️          |-                      |`repo`                              |
+|[`git-commits`](https://github.com/mergestat/syncs/tree/main/syncs/git-commits)         |✅          |✴️          |-                      |`repo`                              |
+|[`git-commit-stats`](https://github.com/mergestat/syncs/tree/main/syncs/git-commit-stats)    |✅          |✴️          |-                      |`repo`                              |
+|[`git-files`](https://github.com/mergestat/syncs/tree/main/syncs/git-files)           |✅          |✴️          |-                      |`repo`                              |
+|[`github-pull-request-commits`](https://github.com/mergestat/syncs/tree/main/syncs/github-pull-request-commits)   |✅          |✴️          |-                      |`repo`                              |
+|[`github-pull-request-reviews`](https://github.com/mergestat/syncs/tree/main/syncs/github-pull-request-reviews)   |✅          |✴️          |-                      |`repo`                              |
+|[`github-issues`](https://github.com/mergestat/syncs/tree/main/syncs/github-issues)  |✅          |✴️          |-                      |`repo`                              |
+|[`github-repo-info`](https://github.com/mergestat/syncs/tree/main/syncs/github-repo-info)|✅          |✴️          |-                      |`repo`                              |
+|[`github-pull-requests`](https://github.com/mergestat/syncs/tree/main/syncs/github-pull-requests)     |✅          |✴️          |-                      |`repo`                              |
+|[`github-repo-stargazers`](https://github.com/mergestat/syncs/tree/main/syncs/github-repo-stargazers)   |✴️         |✴️          |`user:email` OR `read:user`|(`user:email` OR `read:user`) AND `repo`|
+|[`git-refs`](https://github.com/mergestat/syncs/tree/main/syncs/git-refs)            |✅          |✴️          |-                      |`repo`                              |
+|[`scan-syft`](https://github.com/mergestat/syncs/tree/main/syncs/scan-syft)      |✅          |✴️          |-                      |`repo`                              |
+|[`scan-trivy`](https://github.com/mergestat/syncs/tree/main/syncs/scan-trivy)     |✅          |✴️          |-                      |`repo`                              |
 
 
 ## Repo Auto Imports
