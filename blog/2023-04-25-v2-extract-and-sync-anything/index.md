@@ -8,8 +8,7 @@ tags: [mergestat, sql, git, open-source, v2]
 
 # Announcing V2: Extract & Sync Anything 🚀
 
-<!-- TODO(patrickdevivo) add link to release -->
-We're thrilled to announce the release of MergeStat v2, a completely new approach to extracting and syncing data from Git repositories and into SQL! 🎉
+We're thrilled to announce the release of [MergeStat v2](https://github.com/mergestat/mergestat/releases/tag/v2.0.0-beta), a completely new approach to extracting and syncing data from Git repositories and into SQL! 🎉
 
 [![v2 banner image](banner.png)](banner.png)
 
@@ -23,8 +22,7 @@ This means working with data from open-source code scanners such as [`gosec`](ht
 
 [![Screenshot of repo syncs](screenshot.jpg)](screenshot.jpg)
 
-<!-- TODO(patrickdevivo) add link to release -->
-**Check it out!**
+[**Check it out! 🚀**](https://github.com/mergestat/mergestat/releases/tag/v2.0.0-beta)
 
 For example, we recently added a new sync for [GitHub Dependabot data](https://github.com/mergestat/syncs/tree/main/syncs/github-dependabot) in this new container-based approach, allowing for queries on [Dependabot alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts) across repos.
 
