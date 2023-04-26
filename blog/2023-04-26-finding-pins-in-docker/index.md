@@ -1,7 +1,7 @@
 ---
 title: Finding A Pin in a Docker Stack 🪡
 authors: [peterfreiberg]
-description: In this article, we will look at processes and techniques for finding `Dockerfile`s across git repos, and looking for specific image pinning practices. We will use the lens of a DevSecOps persona assessing the current state of where we are using a know-your-code approach.
+description: In this article, we will look at processes and techniques for finding `Dockerfile`s across git repos, looking for specific image pinning practices. We will use the lens of a DevSecOps persona assessing the current state of where we are using a know-your-code approach.
 image: ./dockerfile-locations.png
 tags: [mergestat, sql, docker, security, open-source, know your code]
 ---
@@ -12,7 +12,7 @@ This is a guest post by [**Peter Freiberg**](https://www.linkedin.com/in/peterfr
 *I am a consultant who specialises in Application Security and DevSecOps. I've built teams and capabilities for organisations around Penetration Testing (ethical hacking), Secure Code Reviews, DevSecOps, Security Test Automation, Security Development Lifecycle and training.*
 :::
 
-In this article, we will look at processes and techniques for finding Dockerfiles across git repos, and looking for specific image pinning practices.
+In this article, we will look at processes and techniques for finding Dockerfiles across git repos, looking for specific image pinning practices.
 We will use the lens of a DevSecOps persona assessing the current state of where we *are* using a #knowyourcode approach.
 
 **TLDR:**
