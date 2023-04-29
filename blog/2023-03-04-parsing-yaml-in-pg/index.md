@@ -4,6 +4,7 @@ authors: [patrickdevivo]
 description: MergeStat's mission is to make it possible to query *anything* involved in building & shipping software with SQL. Recently, we had a user looking to query YAML files across their git repos, wanting to extract and aggregate values from config files.
 image: ./pg-logo.png
 tags: [mergestat, sql, yaml, postgres, open-source]
+keywords: [yaml parsing, yaml, yaml to json, postgres json]
 ---
 
 # Querying YAML in PostgreSQL with PLV8 🐘

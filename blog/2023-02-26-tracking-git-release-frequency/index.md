@@ -4,6 +4,7 @@ authors: [patrickdevivo]
 description: In our work on MergeStat, we've often wanted to understand how frequently we ship code, for a variety of reasons. Luckily, we've been able to *use* MergeStat as a way to extract measures of our release frequency.
 image: ./grafana-release-dashboard.jpg
 tags: [mergestat, sql, grafana, DORA, open-source, git]
+keywords: [git release, dora, dora metrics, open source dora metrics]
 ---
 
 # Open-Source Git Release Tracking w/ SQL 🚀

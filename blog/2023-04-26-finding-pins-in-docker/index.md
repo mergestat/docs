@@ -4,6 +4,7 @@ authors: [peterfreiberg]
 description: In this article, we will look at processes and techniques for finding `Dockerfile`s across git repos, looking for specific image pinning practices. We will use the lens of a DevSecOps persona assessing the current state of where we are using a know-your-code approach.
 image: ./dockerfile-locations.png
 tags: [mergestat, sql, docker, security, open-source, know your code]
+keywords: [docker, dockerfile, secure docker, search docker]
 ---
 
 :::info *Guest Post*

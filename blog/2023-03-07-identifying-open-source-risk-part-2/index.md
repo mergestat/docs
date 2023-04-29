@@ -4,6 +4,7 @@ authors: [peterfreiberg]
 description: Previously, we looked at a few ways we can look at open-source library risk across our code. In this article, we’ll look at how we can search for new known vulnerabilities once details become available. 
 image: ./log4j.png
 tags: [mergestat, sql, vulnerabilities, security, open-source]
+keywords: [cve, log4shell, secure open source, software security]
 ---
 
 :::info *Guest Post*
