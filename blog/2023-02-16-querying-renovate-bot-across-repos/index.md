@@ -4,6 +4,7 @@ authors: [patrickdevivo]
 description: Recently, we wanted to know which of our repos had Renovate installed, which is a use case several folks have now shared with us! This post showcases some of the queries we put together around our use of Renovate.
 image: ./renovate-prs-by-state.jpg
 tags: [mergestat, sql, vulnerabilities, security, open-source, renovate]
+keywords: [code vulnerabilities, npm check updates, renovate json]
 ---
 
 # Querying Renovate Bot Across Repos w/ SQL
