@@ -24,7 +24,7 @@ This dashboard is available as a JSON export [here](https://github.com/mergestat
 ## The Setup
 
 To begin scanning IaC repos with MergeStat, you'll need a MergeStat instance.
-You can start locally by following [these instructions](/docs/mergestat/getting-started/running-locally) to get a Docker Compose instance running.
+You can start locally by following [these instructions](/mergestat/getting-started/running-locally) to get a Docker Compose instance running.
 
 Next, you'll want to add the `ghcr.io/mergestat/sync-scan-tfsec` sync to your MergeStat instance:
 
