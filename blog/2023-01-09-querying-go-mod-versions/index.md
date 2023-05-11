@@ -53,7 +53,7 @@ Here's how I used MergeStat to do so:
 ### Run MergeStat
 
 First, I grabbed a server from our friends at [Equinix Metal](https://deploy.equinix.com/metal/).
-I intend to use the MergeStat `docker-compose` set-up, outlined [here](http://localhost:3000/mergestat/getting-started/running-locally/).
+I intend to use the MergeStat `docker-compose` set-up, outlined [here](/mergestat/getting-started/running-locally/).
 
 I `ssh` into my new server and run the following:
 
