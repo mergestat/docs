@@ -23,6 +23,7 @@ First, create a new **Git Source** for local repos:
 ![Add Git Source for local repos](git-source-local-disk.jpg)
 
 
-Now you can add repos to this **Git Source** using `file://` as the url scheme and the _absolute path_ to the repository within the container, for example, `file:///projects/mergestat`.
+Now you can add repos to this **Git Source** using the _absolute path_ to the repository within the container, for example, `/projects/mergestat`. You
+can also use the `file://` scheme but it is not recommended (see [`#868`](https://github.com/mergestat/mergestat/issues/868#issuecomment-1584105220))
 
 ![Add local repository manually](add-local-disk-git-repo.jpg)
