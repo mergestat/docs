@@ -24,6 +24,6 @@ For now, here is the current state of what we are working on and some of the roa
 - Metabase (_roadmap_)
 - Apache Superset (_roadmap_)
 
-## MergeStat Grafana Example Dashbaord
+## MergeStat Grafana Example Dashboard
 
 ![MergeStat Grafana Example Dashboard](https://github.com/mergestat/mergestat/blob/main/examples/templates/grafana/screenshots/mergestat-examples.png?raw=true)

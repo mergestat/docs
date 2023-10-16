@@ -206,7 +206,7 @@ LIMIT 10
 This has been a high level view of *all* the advisories found in a specific GitHub-maintained [public database](https://github.com/github/advisory-database/).
 To examine the advisories that impact your organization or team, you'd want to join the data in this repository with information about what packages your code brings in - potentially by using SBOMs or even parsing package manifests.
 
-Tools such as [Dependabot](https://github.com/features/security) already do this for the GitHub ecosystem, and automate the maintainence of dependencies as well.
+Tools such as [Dependabot](https://github.com/features/security) already do this for the GitHub ecosystem, and automate the maintenance of dependencies as well.
 There are, however, [other databases](https://github.com/aquasecurity/vuln-list) and ecosystems emerging that track advisories and vulnerabilities.
 [MergeStat](https://github.com/mergestat/mergestat) supports [some](https://github.com/mergestat/mergestat/blob/main/internal/syncer/trivy_repo_scan.go) of these tools today, and we are working to make it possible for anyone to easily bring the [output of their own selection of tools](https://github.com/mergestat/mergestat/discussions/704) in.
 We believe the easier it is to access data involved in key aspects of the software-supply-chain, the more secure and the more effective engineering organizations may be.
